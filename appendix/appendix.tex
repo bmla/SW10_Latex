@@ -1,0 +1,51 @@
+\documentclass{article}
+\pagenumbering{gobble}
+\usepackage{adjustbox}
+\usepackage{longtable}
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{graphicx}\usepackage{pdflscape}
+\usepackage{tocloft}
+%opening
+
+
+\begin{document}
+\title{Appendix}
+
+\newlength{\drop}
+%\section*{Paper I: Literature Review}
+
+		\drop=0.1\textheight
+		\centering
+		\vspace*{\baselineskip}
+		\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{\textwidth}{0.4pt}\\[\baselineskip]
+		{\LARGE APPENDICES}\\[0.2\baselineskip]
+		\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+		\rule{\textwidth}{1.6pt}\\[\baselineskip]
+		\scshape
+		\vspace*{2\baselineskip}
+		%Edited by \\[\baselineskip]
+		\vspace*{2\baselineskip}
+		\vspace*{2\baselineskip}
+		\vspace*{2\baselineskip}
+
+\tableofcontents
+
+%\addtocontents{toc}{\protect\renewcommand{\protect\cftsecleader}{\hfill}}
+
+%=================================%
+%======== Appendix table of contents ========%
+%=================================%
+
+%\cftaddtitleline{toc} {subsection}{Appendix A: Questionnaire}{III} % Example
+
+\vspace*{2\baselineskip}
+	\vspace*{2\baselineskip}
+	\vspace*{2\baselineskip}
+	\vspace*{2\baselineskip}
+		{\scshape 2016} \\
+		{\large AALBORG UNIVERSITY}\par
+
+
+\end{document}
