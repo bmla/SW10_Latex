@@ -1,12 +1,16 @@
 % !TEX root = ../paper.tex
 \section{Experiment} \label{sec:experiment}
-In order to be able to compare the different techniques to each other we conducted an experiment in which each participant would perform the techniques in a controlled environment.
-There are two parts to this experiment and in the first part, participants are instructed to hit the target on the screen and a yellow background color is shown on the cell where the blue pointer is \Cref{fig:target}.
+% Intro
+In order to compare the different techniques to each other we conducted an experiment in which each participant would perform the techniques in a controlled environment.
+There are two parts to this experiment because after we finished the first experiment we realized that before we could say anything about accuracy in pixels we would have to tell people to aim and be as precise as they possibly can.
+Not having told our first 51 participants to aim and be precise we did the experiment again with a few changes
+
+% Explaining the difference between the two parts
+In the first part of the experiment, participants are instructed to hit the target on the screen and a yellow background color is shown on the cell where the blue pointer is \Cref{fig:target}.
 This background color snaps the pointer to the grid making the target appear selected.
 For the second part of the experiment, the targets on the large display would have a cross in the middle and the yellow snap-to-grid background was removed \Cref{fig:accuracy}.
 In the second part participants were instructed to be as precise as possible and hit the center of the target.
 These are the only differences between the two parts of the experiment.
-
 \begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/target.pdf}\label{fig:target}}
@@ -15,17 +19,34 @@ These are the only differences between the two parts of the experiment.
 \caption{\protect\subref{fig:target} The targets in the first part of the experiment. \protect\subref{fig:accuracy} The targets in the second part of the experiment.}
 \end{figure}
 
-Before a participant started the experiment, the general purpose of the study would be explained to the participant.
-The 8 techniques were presented one technique after another and before a technique would start, a demonstration video of that technique were shown to the participants on the large display.
-After two iterations of showing the video of the large screen the video runs in a loop on the smaller display.
-
-The experiment was conducted in the usability lab at Aalborg University and in the lab we had setup a large 65 inch screen and a smaller 42 inch screen. 
-A Kinect v2 was mounted below the large display.
-We marked a spot on the floor with a cross where participants were asked to stand.
+\subsection{Experiment Setup} \label{sec:setup}
+% The setup and the hardware used in the experiment
+The experiment was conducted in the usability lab where we had setup a large 65'' screen (1920$\times$1080 pixels) and a smaller 42'' screen (1024$\times$768 pixels).
+A Microsoft Kinect v2 was mounted below the large display (81 cm above the floor) and we marked the floor with a cross (200 cm from the Kinect) where participants were told to stand.
+The phone we used in this experiment is a Samsung Galaxy S2 (4.3'' screen).
 The setup is illustrated in \Cref{fig:setup}.
 
 \begin{figure}[H]
-\subfloat[]{\includegraphics[width = 0.65\columnwidth]{images/setup.pdf}\label{fig:setup}}
+\subfloat[]{\includegraphics[width = 0.6\columnwidth]{images/setup.jpg}\label{fig:setupPhoto}}
+\subfloat[]{\includegraphics[width = 0.37\columnwidth]{images/setup.pdf}\label{fig:setup}}
+\caption{\protect\subref{fig:setupPhoto} the setup in the usability lab. \protect\subref{fig:setup} illustrates the setup and distance between participant and screen, floor and Kinect, and floor and the bottom of the large display.}
+\end{figure}
+
+% Describe the task the participants must do
+% (explain practice targets, targets, grid, push, pull before procedure and task section)
+% Also, explain sequences and the different distances between targets
+
+\subsection{Procedure} \label{sec:procedure}
+Before a participant starts the experiment, the general purpose of the study is explained to the participant and we tell them what is going to happen.
+Then a demonstration video of a technique is shown on the large screen and after watching the video it plays in a loop on the small screen.
+The participant is then presented with the grid and one target after another will appear in the grid until the participant has attempted to hit all targets.
+After completing one technique the remaining techniques follow with the same procedure as the first until all 8 techniques have been performed.
+When a participant has done all the techniques we give them a short demographic questionnaire including age, height, gender, current phone, year of first smartphone, and if they have had prior experience with systems like the Nintendo Wii or the Microsoft Kinect.
+The average time for completing the experiment per participant was 
+
+\begin{figure}[H]
 \subfloat[]{\includegraphics[width = 0.3\columnwidth]{images/phoneScreenshot.png}\label{fig:phoneScreen}}
-\caption{\protect\subref{fig:setup} illustrates the setup and distance between participant and screen, floor and Kinect, and floor and the bottom of the large display.\protect\subref{fig:phoneScreen} shows the scrren on the phone when push techniques are used.}
+\hspace{0.1\columnwidth}
+
+\caption{\protect\subref{fig:phoneScreen} shows the scrren on the phone when push techniques are used.}
 \end{figure}
