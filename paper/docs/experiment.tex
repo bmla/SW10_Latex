@@ -19,11 +19,11 @@ These are the only differences between the two parts of the experiment.
 \caption{\protect\subref{fig:target} The targets in the first part of the experiment. \protect\subref{fig:accuracy} The targets in the second part of the experiment.}
 \end{figure}
 
-\subsection{Experiment Setup} \label{sec:setup}
+\subsection{Experimental Setup} \label{sec:setup}
 % The setup and the hardware used in the experiment
-The experiment was conducted in the usability lab where we had setup a large 65'' screen (1920$\times$1080 pixels) and a smaller 42'' screen (1024$\times$768 pixels).
+The experiment was conducted in the usability lab where we had setup a large 65'' screen (1920$\times$1080 pixels) and a smaller 42'' screen (1024$\times$768 pixels) as seen in \Cref{fig:setupPhoto}.
 A Microsoft Kinect v2 was mounted below the large display (81 cm above the floor) and we marked the floor with a cross (200 cm from the Kinect) where participants were told to stand.
-The phone we used in this experiment is a Samsung Galaxy S2 (4.3'' screen).
+The phone we used in this experiment was a Samsung Galaxy S2 (4.3'' screen).
 The setup is illustrated in \Cref{fig:setup}.
 
 \begin{figure}[H]
@@ -32,17 +32,30 @@ The setup is illustrated in \Cref{fig:setup}.
 \caption{\protect\subref{fig:setupPhoto} the setup in the usability lab. \protect\subref{fig:setup} illustrates the setup and distance between participant and screen, floor and Kinect, and floor and the bottom of the large display.}
 \end{figure}
 
-% Describe the task the participants must do
-% (explain practice targets, targets, grid, push, pull before procedure and task section)
+\subsubsection{Design} \label{}
+% (explain practice targets, targets, grid, before procedure and task section)
 % Also, explain sequences and the different distances between targets
+A within-group design was used for the experiment and each participant would use all 8 techniques once during the experiment.
+We have 2 different target sizes and 8 techniques (push = 4, pull = 4) as the independent variables.
+For each technique there are a total of 18 targets and 3 practice targets at the beginning of each technique. 
+Practice targets allows the participants to get familiar with the technique before we start collecting data for a technique.
+The 2 different sizes of targets are 9 small and 9 large targets, which are placed in a square grid cell.
+We use a grid to give the yellow highlighted ``snap-to-grid'' background meaning (see \cref{fig:target}).
+The size of the small grid is 10$\times$5 cells where each cell is 61 pixels (7.3 cm) wide and the size of the large grid is 20$\times$10 cells where each cell is 122 pixels (14.6 cm) wide.
+A target appears in a cell in a predetermined sequence to make sure that all participants are given same distances between targets and the sequences are then randomly assigned to a technique for each participant for randomization.
+The order in which the participants are given a technique is randomized to minimize the learning effect.
+For both \target and \accuracy 51\% of the participants started with \push techniques and 49\% started with \pull techniques.
+For the \target 27\% of the participants started the test with \pinch, 21\% with \swipe, 25\% with \throw, and 27\% with \tilt.
+Similarly, for the \accuracy 22\% of the participants started the test with \pinch, 27\% with \swipe, 24\% with \throw, and 27\% with \tilt.
+For \target the total amount of attempts collected were 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 51 participants = 7344 attempts and for \accuracy the total is 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 33 participants = 4752 attempts.
 
-\subsection{Procedure} \label{sec:procedure}
+\subsection{Task \& Procedure} \label{sec:procedure}
 Before a participant starts the experiment, the general purpose of the study is explained to the participant and we tell them what is going to happen.
 Then a demonstration video of a technique is shown on the large screen and after watching the video it plays in a loop on the small screen.
 The participant is then presented with the grid and one target after another will appear in the grid until the participant has attempted to hit all targets.
 After completing one technique the remaining techniques follow with the same procedure as the first until all 8 techniques have been performed.
 When a participant has done all the techniques we give them a short demographic questionnaire including age, height, gender, current phone, year of first smartphone, and if they have had prior experience with systems like the Nintendo Wii or the Microsoft Kinect.
-The average time for completing the experiment per participant was 
+The average time for completing the experiment per participant was \todo[inline]{Insert the avg. time here}
 
 \begin{figure}[H]
 \subfloat[]{\includegraphics[width = 0.3\columnwidth]{images/phoneScreenshot.png}\label{fig:phoneScreen}}
