@@ -1,0 +1,21 @@
+Query used: 
+SELECT COUNT(*) AS 'starts for that type' FROM Attempts WHERE AttemptNumber = 1 AND Source = 0 AND Type = 0;
+
+Starts for Target: (Total: 51)
+Pinch: 14 ~ 0.27 = 27%
+Swipe: 10 ~ 0.21 = 21%
+Throw: 13 ~ 0.25 = 25%
+Tilt: 14 ~ 0.27	 = 27%
+
+Push: 26 ~ 0.5 = 50%
+Pull: 25 ~ 0.5 = 50%
+
+
+Starts for Accuracy: (Total: 33)
+Pinch: 7 ~ 0.21 = 22%
+Swipe: 9 ~ 0.27 = 27%
+Throw: 8 ~ 0.24 = 24%
+Tilt: 9 ~ 0.27  = 27%
+
+Push: 17 ~ 0.5 = 50%
+Pull: 16 ~ 0.5 = 50%
