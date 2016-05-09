@@ -55,7 +55,7 @@ This technique was chosen because it has a very simplistic design, with a very l
 It is also a one handed technique and requires very little effort from the user to use.
 The \push and \pull version of this technique are very similar.
 First the user points at the desired location with the phone in a stretched arm (\cref{fig:swipeTechniqueA}) and then swipes his finger on the screen (\cref{fig:swipeTechniqueC}).
-The direction he swipes depends on whether he wants to \push or \pull information.
+The direction he swipes depends on whether the user wants to \push or \pull information.
 If he swipes away from himself, he pushes information to the screen.
 If he swipes towards himself, he is pulling information from the screen onto the device.  
 
@@ -65,3 +65,50 @@ If he swipes towards himself, he is pulling information from the screen onto the
 	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/swipe_c.jpg}\label{fig:swipeTechniqueC}}
 	\label{fig:swipeTechnique}
 \end{figure}
+
+The \throw technique (\cref{fig:throwTechnique}) is a combination of two techniques.
+The first is a pointing technique were the user uses his hands as a cursor on the screen \todo{add reference}.
+The second is a technique used by Walter et al. \todo{add reference} in a system used to submit information onto a large public display.
+This technique was chosen because of it's natural and playful design, as well as mirroring the idea of throwing something, like a ball, to someone or somewhere.
+\throw is a two handed technique, as well as having a larger number of steps to take in order to activate it.
+The \throw technique is performed as follows: 
+First the user points at the targeted position with one hand (\cref{fig:throwTechniqueA}).
+Then, if the user is pushing data from the phone, he has to select the data to be pushed (\cref{fig:throwTechniqueB}).
+The user then performs a swinging motion with the other hand which is holding the phone.
+If he is pushing, the he swings towards the screen, if he is pulling he swings away from it (\cref{fig:throwTechniqueC}) 
+
+
+\begin{figure}[H]
+	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/throw_a.jpg}\label{fig:throwTechniqueA}}
+	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/throw_b.jpg}\label{fig:throwTechniqueB}}
+	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/throw_c.jpg}\label{fig:throwTechniqueC}}
+	\label{fig:throwTechnique}
+\end{figure}
+
+The \tilt technique (\cref{fig:tiltTechnique}) is used by Lucero et al. in \todo{add reference}.
+He created a system in which users would transfer objects from a large display onto their mobile devices.
+The \throw technique chosen because it is a one handed, low complexity technique with a few amount of steps needed to activate it. 
+Just like the \swipe technique, it is easy intuitive and straight forward. 
+The \tilt technique is performed as follows:
+The user first points and the target location (\cref{fig:tiltTechniqueA}).
+If the user is performing a \push technique, he tilts the phone away from himself.
+If he is performing a \pull technique, he tilts the phone towards himself. 
+
+\begin{figure}[H]
+	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/tilt_a.jpg}\label{fig:tiltTechniqueA}}
+	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/tilt_b.jpg}\label{fig:tiltTechniqueB}}
+	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/tilt_c.jpg}\label{fig:tiltTechniqueC}}
+	\caption{The \tilt technique is performed by doing a forward tilt motion with the phone from \protect\subref{fig:tiltTechniqueA} to \protect\subref{fig:tiltTechniqueC}.}
+	\label{fig:tiltTechnique}
+\end{figure}
+
+All techniques that were chosen have all been used before in other systems in order to facilitate the interaction between mobile devices and large public displays.
+They are all different in the way they are activated as well as the number of hands that are used to perform the technique.
+For our two handed techniques, we have \throw and \grab, and for our one handed techniques we have \tilt and \swipe. 
+Each technique also has different ways to activate it. 
+The \throw and \tilt techniques require the user to move the phone, whereas the \swipe and \grab techniques require the user to touch and manipulate the screen of the device in order to activate. 
+
+All the techniques that will be used in this experiment use some combination of mid-air pointing, touch gestures and phone movements to perform. 
+These were all achieved by using the Microsoft Kinect V2 as well as the accelerometer and touch sensors on the phones. 
+The Kinect utilizes its depth camera in order to give information about a users location in 3D space, allowing us to track the position of the users hands and building the techniques around that. 
+The touch sensor on the phones was used in order to recognize touch and swipe gestures; the accelerometer was used to detect significant movement on the phone and use that for the \tilt and \throw techniques. 
