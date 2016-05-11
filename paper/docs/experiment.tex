@@ -2,21 +2,50 @@
 \section{Experiment} \label{sec:experiment}
 % Intro
 In order to compare the different techniques to each other we conducted an experiment in which each participant would perform the techniques in a controlled environment.
-There are two parts to this experiment because after we finished the first experiment we realized that before we could say anything about accuracy in pixels we would have to tell people to aim and be as precise as they possibly can.
-Not having told our first 51 participants to aim and be precise we did the experiment again with a few changes
+There are two parts to this experiment because after we finished the first experiment we realized that before we could say anything about accuracy in pixels we would have to tell people to aim and be as precise as they possibly could.
+Not having told our first 51 participants to aim and be precise we did the experiment again with a few changes.
+The first part of the experiment will be referred to as \target, and the second will be referred to as \accuracy.
 
-% Explaining the difference between the two parts
-In the first part of the experiment, participants are instructed to hit the target on the screen and a yellow background color is shown on the cell where the blue pointer is \Cref{fig:target}.
-This background color snaps the pointer to the grid making the target appear selected.
-For the second part of the experiment, the targets on the large display would have a cross in the middle and the yellow snap-to-grid background was removed \Cref{fig:accuracy}.
-In the second part participants were instructed to be as precise as possible and hit the center of the target.
-These are the only differences between the two parts of the experiment.
+\subsection{Implementation}
+
+The four interaction grid techniques were implemented in a small test application were the main goal was to correctly put shapes onto the screen from the smart phone or pull them away from the screen and put them on the phone.
+The shapes would simulate information or data, and two shapes were used in order to simulate the effect of choice and not have the user blindly using the technique. 
+A grid system was implemented, were each target could be located inside of. The grid had two different sizes.
+One was a large cell system, which had $5\times10$ cells, and each cell measured 61 pixels (7.3 cm) on each side.
+The other was a small cell system, with $10\times20$ cells, each cell measuring 122 pixels (14.6 cm)  on each side. 
+
+Shapes would appear in the cells, filling 80\% of it. 
+These shapes would appear according to a predetermined series of locations, so that we could ensure that each target had an equal distribution of distances between them. 
+For the user, the sequence would appear as random. 
+These shapes would represent targets which the user had to hit.
+During the \accuracy, a white cross was added to the center of each shape to better help the users be as precise as possible while trying to hit the center of each shape.
+
+A blue circle was used to represent were the user is pointing on the screen
+This is were the user would hit whenever he performed an attempt with a given technique.
+During the \target, the circle would be solid blue, as well as having whichever cell the pointer was currently over being highlighted in a sharp, yellow color.
+This can be seen in \Cref{fig:target}.
+During the \accuracy, the circle would be opaque so that the user could better see the cross that was added.
+The highlight was also removed so that the users would not feel that hitting any location on the cell was enough. 
+This can be seen in \Cref{fig:accuracy}.
+
 \begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width = 0.13\columnwidth]{images/target.pdf}\label{fig:target}}
 \hspace{0.05\columnwidth}
 \subfloat[]{\includegraphics[width = 0.13\columnwidth]{images/accuracy.pdf}\label{fig:accuracy}}
 \caption{\protect\subref{fig:target} The targets in the first part of the experiment. \protect\subref{fig:accuracy} The targets in the second part of the experiment.}
+\end{figure}
+
+During the \push phase of the experiment, users would be presented with one shape on the screen and two on the smartphone, as seen in \cref{fig:pushScreen}.
+Here, the screen would tell the users what the correct shape was, and the user had to perform the correct gesture by selecting the correct shape on the phone.
+During the \pull part of the experiment, users would be presented with two shapes on the large screen, and one shape on the smart phone.
+Here, the phone would be telling users what the correct shape was and users would have to grab the correct shape from the large display. 
+
+\begin{figure}[H]
+	\subfloat[\push]{\includegraphics[width = 0.49\columnwidth]{images/pushScreen.jpg}\label{fig:pushScreen}}
+	\hspace{0.01\columnwidth}
+	\subfloat[\pull]{\includegraphics[width = 0.49\columnwidth]{images/pullScreen.jpg}\label{fig:pullScreen}}
+	\caption{The screens on both the large display and the phone for the \accuracy.}
 \end{figure}
 
 \subsection{Experimental Setup} \label{sec:setup}
@@ -36,30 +65,29 @@ The setup is illustrated in \Cref{fig:setup}.
 % (explain practice targets, targets, grid, before procedure and task section)
 % Also, explain sequences and the different distances between targets
 A within-group design was used for the experiment and each participant would use all 8 techniques once during the experiment.
-We have 2 different target sizes and 8 techniques (push = 4, pull = 4) as the independent variables.
+We have 2 different target sizes (large, small) and 8 techniques (push = 4, pull = 4) as the independent variables.
 For each technique there are a total of 18 targets and 3 practice targets at the beginning of each technique. 
 Practice targets allows the participants to get familiar with the technique before we start collecting data for a technique.
-The 2 different sizes of targets are 9 small and 9 large targets, which are placed in a square grid cell.
-We use a grid to give the yellow highlighted ``snap-to-grid'' background meaning (see \cref{fig:target}).
-The size of the small grid is 10$\times$5 cells where each cell is 61 pixels (7.3 cm) wide and the size of the large grid is 20$\times$10 cells where each cell is 122 pixels (14.6 cm) wide.
-A target appears in a cell in a predetermined sequence to make sure that all participants are given same distances between targets and the sequences are then randomly assigned to a technique for each participant for randomization.
-The order in which the participants are given a technique is randomized to minimize the learning effect.
+The order in which the participants are presented to a technique is randomized to minimize the learning effect of each technique.
 For both \target and \accuracy 51\% of the participants started with \push techniques and 49\% started with \pull techniques.
 For the \target 27\% of the participants started the test with \grab, 21\% with \swipe, 25\% with \throw, and 27\% with \tilt.
 Similarly, for the \accuracy 22\% of the participants started the test with \grab, 27\% with \swipe, 24\% with \throw, and 27\% with \tilt.
 For \target the total amount of attempts collected were 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 51 participants = 7344 attempts and for \accuracy the total is 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 33 participants = 4752 attempts.
 
-\subsection{Task \& Procedure} \label{sec:procedure}
+\subsubsection{Participants}
+For the \target, 51 people took part in the experiment. They ranged in age from 21 to 52 (M: 27,98) and were between 1.56m and 1.98m (M: 1,79m). 
+15.7\% of participants were women, and 84.3\% were male.
+All of the participants owned smartphones and had owned one for 2-12 years (M:5.9).
+
+For the \accuracy, 33 people took part. They were anywhere between 20 and 55 years old (M: 23.18) and were between 1.56m and 2m tall (M: 1.77m).
+30.3\% of the participants were female, while 69.7\% were male.
+They had all owned smartphones between 1 and 9 years (M: 5.5).
+
+\subsubsection{Task \& Procedure} \label{sec:procedure}
 Before a participant starts the experiment, the general purpose of the study is explained to the participant and we tell them what is going to happen.
 Then a demonstration video of a technique is shown on the large screen and after watching the video it plays in a loop on the small screen.
 The participant is then presented with the grid and one target after another will appear in the grid until the participant has attempted to hit all targets.
 After completing one technique the remaining techniques follow with the same procedure as the first until all 8 techniques have been performed.
 When a participant has done all the techniques we give them a short demographic questionnaire including age, height, gender, current phone, year of first smartphone, and if they have had prior experience with systems like the Nintendo Wii or the Microsoft Kinect.
-The average time for completing the experiment per participant was \todo[inline]{Insert the avg. time here}
+The average time for completing the experiment per participant was 25 minutes, give or take 5 minutes. 
 
-\begin{figure}[H]
-\subfloat[\push]{\includegraphics[width = 0.49\columnwidth]{images/pushScreen.jpg}\label{fig:pushScreen}}
-\hspace{0.01\columnwidth}
-\subfloat[\pull]{\includegraphics[width = 0.49\columnwidth]{images/pullScreen.jpg}\label{fig:pullScreen}}
-\caption{The screens on both the large display and the phone for the \accuracy.}
-\end{figure}
