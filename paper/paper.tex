@@ -30,7 +30,7 @@
 \usepackage{textcomp}
 \usepackage[inline]{enumitem}
 \usepackage{xspace}
-\usepackage[table,xcdraw]{xcolor}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
 \usepackage[utf8]{inputenc}% Brug af æ, ø og å
 % Some optional stuff you might like/need.
 \usepackage{microtype} % Improved Tracking and Kerning
@@ -42,7 +42,12 @@
 \usepackage{hyperref} %doublecheck the need for this one, this tex file has a global style for URL
 \usepackage{cleveref}
 \usepackage{csquotes}
+\usepackage{verbatim}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
 %\creflabelformat{figure}{(#2#1#3)}
+\pgfplotsset{width=7cm,compat=1.8}
 
 
 % If you want to use todo notes, marginpars etc. during creation of your draft document, you
@@ -52,6 +57,7 @@
 \usepackage{todonotes}
 
 % Variable definitions
+
 \newcommand{\grab}{\emph{Grab}\xspace}
 
 \newcommand{\swipe}{\emph{Swipe}\xspace}
@@ -61,8 +67,10 @@
 \newcommand{\push}{\emph{Push}\xspace}
 \newcommand{\pull}{\emph{Pull}\xspace}
 
-\newcommand{\alltechniques}{ \grab, \swipe, \throw and \tilt}\newcommand{\target}{\emph{Target-Experiment}\xspace}
-\newcommand{\accuracy}{\emph{Accuracy-Experiment}\xspace}\newcommand{\ts}{\textsuperscript}
+\newcommand{\alltechniques}{ \grab, \swipe, \throw and \tilt}
+\newcommand{\target}{\emph{Target-Experiment}\xspace}
+\newcommand{\accuracy}{\emph{Accuracy-Experiment}\xspace}
+\newcommand{\ts}{\textsuperscript}
 
 % Paper metadata (use plain text, for PDF inclusion and later
 % re-using, if desired).  Use \emtpyauthor when submitting for review
