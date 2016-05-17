@@ -15,4 +15,76 @@ From the \accuracy, we started with a total of 4752 attempts.
 Finally 130 attempts were removed with the same Outlier Labeling method used above.
 This gave us a total of 4511 attempts for the \accuracy.
 
+We then split up the data into two different data sets, the \push and \pull, in order to look at them independently. 
+
+\Cref{tab:numberOfAttempts} shows the final number of attempts each technique had in the two different experiments
+
+\begin{table}[H]
+	\centering
+	\textbf{Number of attempts}\\[4pt]
+	\begin{adjustbox}{width=\columnwidth}
+		\subfloat[\target]{
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\rowcolor[HTML]{9B9B9B} 
+				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
+				Push & 830 & 896 & 889 & 862 \\ \hline
+				Pull & 797 & 893 & 896 & 873 \\ \hline
+			\end{tabular}
+		}
+		\subfloat[\accuracy] {
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\rowcolor[HTML]{9B9B9B} 
+				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
+				Push & 551 & 583 & 566 & 575 \\ \hline
+				Pull & 534 & 564 & 568 & 570 \\ \hline
+			\end{tabular}
+		}
+	\end{adjustbox}
+	\caption{Number of attempts for each technique in each experiment}
+	\label{tab:numberOfAttempts}
+\end{table}
+
+
+\subsection{Success rate}
+The results presented here will be based on the data collected during the \target. 
+Here we will be presenting results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results. 
+
+To see whether or not each technique had an effect on the effectiveness of each attempt, we performed a Pearsons Chi-Square test on both data sets. 
+For the \push techniques, $X(3)=121.950$, $p<0.000$, and for the \pull techniques we got $X(3)=438.473$, $p<0.000$. 
+This means that both \push and \pull techniques had a significant effect on the effectiveness of each attempt. 
+\Cref{tab:successRate} shows the success rate for each of the techniques. 
+
+\begin{table}[H]
+	\centering
+	\textbf{Hit Success Means}\\[4pt]
+	\begin{adjustbox}{width=\columnwidth}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\rowcolor[HTML]{9B9B9B} 
+			& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
+			Push & 95.9\% & 95.8\% & 92.6\% & 83.3\% \\ \hline
+			Pull & 94\% & 97.5\% & 96.4\% & 71.5\% \\ \hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{Success rate for each technique}
+	\label{tab:successRate}
+\end{table}
+
+\subsection{Time taken}
+This section will be presenting results based on the \target.
+Here, we will be presenting the results in regards to how long each user took in performing each technique. 
+When discussing these results, we will be referring to them as a techniques efficiency.
+
+We performed a linear mixed effects model analysis on the data to see whether or not each technique had a significant effect on the efficiency of each attempt. 
+
+\subsection{Distance from target}
+The data that was used to measure the distance from the target was based on the \accuracy experiment.
+Here we will present the results in regards to how far away from the center of the target (in pixels) each user was when performing the technique. 
+This will be referred as a a techniques accuracy when we discuss the results presented in this section. 
+
+We performed another linear mixed effects model analysis on the data to see if each technique had a significant effect on the accuracy of each attempt. 
+
+
 
