@@ -7,50 +7,20 @@ Some data points needed to be removed from the experiments, in order to gain a c
 
 From the \target, we started with a total of 7344 attempts.
 176 were removed because of system errors, were the system wrongly activated a technique attempt even though the user did not intend to do so.
-Another 232 attempts were removed as outliers using the Outlier Labeling method described by Hoaglin and Iglewicz in Resistant Rules for Outlier Labeling \cite{Hoaglin:1987}.
-This gave us a total of 6936 attempts for the \target.
+Another 406 attempts were removed as outliers using the Outlier Labeling method described by Hoaglin and Iglewicz in Resistant Rules for Outlier Labeling \cite{Hoaglin:1987}.
+This gave us a total of 6762 attempts for the \target.
 
 From the \accuracy, we started with a total of 4752 attempts.
 111 attempts were removed to system errors. 
 Finally 130 attempts were removed with the same Outlier Labeling method used above.
 This gave us a total of 4511 attempts for the \accuracy.
 
-We then split up the data into two different data sets, the \push and \pull, in order to look at them independently. 
-
-\Cref{tab:numberOfAttempts} shows the final number of attempts each technique had in the two different experiments
-
-\begin{table}[H]
-	\centering
-	\textbf{Number of attempts}\\[4pt]
-	\begin{adjustbox}{width=\columnwidth}
-		\subfloat[\target]{
-			\begin{tabular}{c c c c c}
-				\cline{2-5}
-				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
-				\textbf{Push} & 830 & 896 & 889 & 862 \\ \hline
-				\textbf{Pull} & 797 & 893 & 896 & 873 \\ \hline
-			\end{tabular}
-		}
-		\subfloat[\accuracy] {
-			\begin{tabular}{c c c c c}
-				\cline{2-5}
-				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
-				\textbf{Push} & 551 & 583 & 566 & 575 \\ \hline
-				\textbf{Pull} & 534 & 564 & 568 & 570 \\ \hline
-			\end{tabular}
-		}
-	\end{adjustbox}
-	\caption{Number of attempts for each technique in each experiment}
-	\label{tab:numberOfAttempts}
-\end{table}
-
-
 \subsection{Success rate}
 The results presented here will be based on the data collected during the \target. 
 Here we will be presenting results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results. 
 
 To see whether or not each technique had an effect on the effectiveness of each attempt, we performed a Pearsons Chi-Square test on both data sets. 
-For the \push techniques, $X(3)=121.950$, $p<0.000$, and for the \pull techniques we got $X(3)=438.473$, $p<0.000$. 
+For the \push techniques, $X(3)=121.950$, $p<0.001$, and for the \pull techniques we got $X(3)=438.473$, $p<0.001$. 
 This means that both \push and \pull techniques had a significant effect on the effectiveness of each attempt. 
 \Cref{tab:successRate} shows the success rate for each of the techniques. 
 
@@ -61,8 +31,8 @@ This means that both \push and \pull techniques had a significant effect on the 
 			& \multicolumn{4}{c}{\textbf{Hit Success Means}} \\
 			\cline{2-5}
 			& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
-			\textbf{Push} & 95.9\% & 95.8\% & 92.6\% & 83.3\% \\ \hline
-			\textbf{Pull} & 94\% & 97.5\% & 96.4\% & 71.5\% \\ \hline
+			\textbf{Push} & 95.9\% & 96\% & 93.2\% & 83.3\% \\ \hline
+			\textbf{Pull} & 94\% & 97.5\% & 96.7\% & 71.8\% \\ \hline
 		\end{tabular}
 	\caption{Success rate for each technique}
 	\label{tab:successRate}
@@ -73,7 +43,12 @@ This section will be presenting results based on the \target.
 Here, we will be presenting the results in regards to how long each user took in performing each technique. 
 When discussing these results, we will be referring to them as a techniques efficiency.
 
-We performed a linear mixed effects model analysis on the data to see whether or not each technique had a significant effect on the efficiency of each attempt. 
+We performed a linear mixed effects model analysis on the data to see if how time was affected by the different aspects of our experiment. We found out that effectiveness had no effect on the time each user took per attempt ($F_{1,6706.785} = 2.283, p = 0.131$), and neither had the direction of the technique ($F_{1,6695.822} = 1.952, p = 0.162$). The target size ($F_{1,6695.228} = 91.634, p < 0.001$) and the technique  ($F_{1,6695.228} = 91.634, p < 0.001$) though did have significant effects on the time taken per attempt. We performed a post-hoc LSD pairwise comparison on the techniques to see how each technique differed from one another and found that all techniques were significantly different $(p<0.001)$ from each other. 
+
+We also found that there were other interactions between the variables that were affecting the time for each attempt differently. $Direction \times Technique$  ($F_{3,6694.657} = 52.272, p < 0.001$), $Effectiveness \times Technique$  ($F_{3,6696.169} = 5.227, p < 0.001$) and finally $Effectiveness \times Direction \times Technique$  ($F_{3,6696.038} = 10.235, p < 0.001$) all showed to be significant interactions. We then ran another post-hoc LSD pairwise test between successful and failed techniques for each technique and direction to see were that significance was. The only significantly different pair was between \grab \push and \pull $(p < 0.001)$.
+
+Below you can find the means for each technique and direction in table something
+\todo[inline]{add table}
 
 \subsection{Distance from target}
 The data that was used to measure the distance from the target was based on the \accuracy experiment.
@@ -82,4 +57,5 @@ This will be referred as a a techniques accuracy when we discuss the results pre
 
 We performed another linear mixed effects model analysis on the data to see if each technique had a significant effect on the accuracy of each attempt. 
 
+\input{docs/results/time}
 
