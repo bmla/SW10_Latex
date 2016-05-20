@@ -1,4 +1,4 @@
-%!TEX root = ../paper.tex
+%!TEX root = ../../paper.tex
 \begin{figure}[H]
 \centering
 %\textbf{Time performance means}\\[4pt]
@@ -13,7 +13,10 @@
     axis lines*=left,
     ymajorgrids,
     extra y ticks=8,
-    extra y tick style={grid=none},
+    extra y tick style={grid=none}, 
+    nodes near coords, 
+    nodes near coords align={vertical},
+    every node near coord/.append style={rotate=90, anchor=west, yshift=-1.2mm, font=\scriptsize},
     ytick={1,...,8}
     ]
 \addplot[fill=blue] plot[error bars/.cd, y dir=both, y explicit] coordinates {
