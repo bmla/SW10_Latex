@@ -9,17 +9,44 @@ Another 406 attempts were removed as outliers using the Outlier Labeling method 
 This gave us a total of 6762 attempts for the \target.
 
 From the \accuracy, we started with a total of 4752 attempts.
-111 attempts were removed to system errors. 
-Finally 130 attempts were removed with the same Outlier Labeling method used above.
-This gave us a total of 4511 attempts for the \accuracy.
+111 attempts were removed due to system errors. 
+Finally 138 attempts were removed with the same Outlier Labeling method used above.
+This gave us a total of 4503 attempts for the \accuracy.
+
+\Cref{tab:numberOfAttempts} shows the final number of attempts each technique had in the two different experiments
+
+\begin{table}[H]
+	\centering
+	\textbf{Number of attempts}\\[4pt]
+	\begin{adjustbox}{width=\columnwidth}
+		\subfloat[\target]{
+			\begin{tabular}{c c c c c}
+				\cline{2-5}
+				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
+				\textbf{Push} & 830 & 835 & 814 & 862 \\ \hline
+				\textbf{Pull} & 784 & 893 & 867 & 877 \\ \hline
+			\end{tabular}
+		}
+		\subfloat[\accuracy] {
+			\begin{tabular}{c c c c c}
+				\cline{2-5}
+				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
+				\textbf{Push} & 551 & 576 & 561 & 582 \\ \hline
+				\textbf{Pull} & 533 & 576 & 569 & 555 \\ \hline
+			\end{tabular}
+		}
+	\end{adjustbox}
+	\caption{Number of attempts for each technique in each experiment}
+	\label{tab:numberOfAttempts}
+\end{table}
 
 \subsection{Success rate}
-The results presented here will be based on the data collected during the \target. 
-Here we will be presenting results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results. 
+The success rate is based on the data collected during the \target. 
+Here we present results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results. 
 
-To see whether or not each technique had an effect on the effectiveness of each attempt, we performed a Pearsons Chi-Square test on both data sets. 
+To see whether or not each technique had an effect on the effectiveness of each attempt, and was not just noise, we performed a Pearsons Chi-Square test on both data sets. 
 For the \push techniques, $X(3)=121.950$, $p<0.001$, and for the \pull techniques we got $X(3)=438.473$, $p<0.001$. 
-This means that both \push and \pull techniques had a significant effect on the effectiveness of each attempt. 
+This means that both \push and \pull techniques had a significant effect on the effectiveness of each attempt, and was not purely coincidence. 
 \Cref{tab:successRate} shows the success rate for each of the techniques. 
 
 \begin{table}[H]
@@ -33,14 +60,14 @@ This means that both \push and \pull techniques had a significant effect on the 
 			\textbf{Push} & 95.9\% & 96\% & 93.2\% & 83.3\% \\ \hline
 			\textbf{Pull} & 94\% & 97.5\% & 96.7\% & 71.8\% \\ \hline
 		\end{tabular}
-	\caption{Success rate for each technique}
+	\caption{Success rate for each technique in \target}
 	\label{tab:successRate}
 \end{table}
 
 \subsection{Time taken}
-This section will be presenting results based on the \target.
-Here, we will be presenting the results in regards to how long each user took in performing each technique. 
-When discussing these results, we will be referring to them as a techniques efficiency.
+The time taken results are based on the \target.
+Here, we present results in regards to how long each user took in performing each technique. 
+When discussing these results, we will be referring to a technique's efficiency.
 
 We performed a linear mixed effects model analysis on the data to see if how time was affected by the different aspects of our experiment. 
 We found out that effectiveness had no effect on the time each user took per attempt ($F_{1,6706.785} = 2.283, p = 0.131$), and neither had the direction of the technique ($F_{1,6695.822} = 1.952, p = 0.162$). 
@@ -50,17 +77,17 @@ We performed a post-hoc LSD pairwise comparison on the techniques to see how eac
 We also found that there were other interactions between the variables that were affecting the time for each attempt differently. 
 $Direction \times Technique$  ($F_{3,6694.657} = 52.272, p < 0.001$), $Effectiveness \times Technique$  ($F_{3,6696.169} = 5.227, p < 0.001$) and finally $Effectiveness \times Direction \times Technique$  ($F_{3,6696.038} = 10.235, p < 0.001$) all showed to be significant interactions. 
 We then ran another post-hoc LSD pairwise test between successful and failed techniques for each technique and direction to see were that significance was. 
-The only significantly different pair was between \grab \push and \pull $(p < 0.001)$.
+The only significantly different pair was between the \grab \push and \grab \pull techniques $(p < 0.001)$.
 
 Below you can find the means for each technique and direction in table something
 \todo[inline]{add table}
 
 \subsection{Distance from target}
 The data that was used to measure the distance from the target was based on the \accuracy experiment.
-Here we will present the results in regards to how far away from the center of the target (in pixels) each user was when performing the technique. 
-This will be referred as a a techniques accuracy when we discuss the results presented in this section. 
+Here we present the results in regards to how far away from the center of the target (in pixels) each user was when performing the technique. 
+This is referred to as a techniques accuracy when we discuss the results. 
 
-We performed another linear mixed effects model analysis on the data to see if each technique had a significant effect on the accuracy of each attempt. 
+We performed a linear mixed effects model analysis on the data to see if each technique had a significant effect on the accuracy of each attempt. 
 
 We found that each technique did have a significant effect on accuracy ($F_{3,4458.26}=193.869, p<0.001$).
 We also found that the target size also had an effect on accuracy ($F_{1,4462.203}=100.016, p<0.001$).
@@ -74,3 +101,6 @@ All other were significantly different from one another ($p<0.004$).
 
 Below you can see the mean for each technique and direction in table something 
 \todo[inline]{add table}
+
+
+
