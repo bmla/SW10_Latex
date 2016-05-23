@@ -72,8 +72,8 @@
 \newcommand{\accuracy}{\emph{Accuracy-Experiment}\xspace}
 \newcommand{\ts}{\textsuperscript}
 
-\let\oldhline\hline
-\renewcommand{\hline}{\oldhline\rule{0pt}{2.6ex}\rule[-0.9ex]{0pt}{0pt}}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
 \newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
 \begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
