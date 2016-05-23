@@ -1,62 +1,61 @@
 % !TEX root = ../paper.tex
 \section{Related work} \label{sec:relatedwork}
-In this section we will be present the work which has been done in the area of techniques for transferring information and data between phones and displays.
-We will present the developments within the topic of pointing in mid-air and that of controlling a cursor on a display at a distance.
+In this section we will present the work which has been done in the area of techniques for transferring information and data between mobile devices and displays.
+We will present the developments within the topic of pointing in mid-air and controlling a cursor on a display at a distance.
 
 \subsection{Large displays \& Mid-air pointing} \label{sec:largeDisplayAirPointing}
-In this section we will discuss the research within the area of large displays and wall-sized displays.
 The interaction interface for large displays will most likely be either touch or mid-air pointing.
 For pointing in mid-air there are different applications such as Microsofts's new mixed reality glasses, named HoloLens.
 With HoloLens, the controlling interface is hand gestures combining the physical 3D world with the virtual or augmented reality made possible with the HoloLens.
-Using mid-air gestures could also make the 3D space we move around in combine more seamlessly with the what we see on a large display.
+Using mid-air gestures can also make the 3D space we move around in combine more seamlessly with the what we see on a large display.
 In the literature there are different approaches to pointing and controlling, for example, virtual pointers on a screen. 
 
 % This is the Off-Limits paper
 Using a large display and mid-air pointing, Markussen et al. \cite{Markussen:2016} explored an interaction concept called \emph{Off-Limits} in which the user is able to interact with a large display outside the boundaries of the screen.
-The results show that, for off-screen interaction, touch is slower than using mid-air techniques but with mid-air participants would undershoot their targets.
+The results show that, for off-screen interaction, touch is slower than using mid-air techniques but participants who used mid-air would undershoot their targets.
 This problem resulted in a model that corrects for undershooting thus creating a better mapping between where participants would like to point and where they actually point.
 The study showed that \emph{Off-Limits} outperformed the naive implementation of an off-screen technique by being faster and requiring fewer interactions.
 %Participants had to acquire a number by pointing on a horizontal line that continued beyond the screen's boundary in both directions.
-%They did three studies and in the first two they were exploring the performance and how people are understanding off-screen space.
-%For the last experiment they compared the \emph{Off-Limits} interface (which was created based on knowledge from the two previous studies) with the naïve implementation of \emph{Off-Screen} pointing.
+%They did three studies and in the first two they were exploring the performance and how people understand off-screen space.
+%For the last experiment they compared the \emph{Off-Limits} interface (which was created based on knowledge from two previous studies) with the naïve implementation of \emph{Off-Screen} pointing.
 
 % Should I Stay or Should I Go
 Jacobsen et al. \cite{Jakobsen:2015} explores two different interaction interfaces for large displays, namely touch and mid-air gestures.
-With two experiments they aim is to find out when users choose one interface over the other.
+With two experiments they aim to find out when users choose one interface over the other.
 The first experiment aims to compare touch and mid-air and the results showed a high error rate for both while the target selection time for mid-air was 40\% more than for touch.
 Participants were given questions on subjective satisfaction and the results showed that 12 of 19 preferred touch and 7 of 19 preferred mid-air.
-For the second experiment users were free to choose which interface to use and during the experiment movements was required to simulate circumstances where it would be necessary to move away from the screen.
-The results revealed that 42\% of the trails made, participants choose to use mid-air and that for medium to large target sizes where move requests were infrequent or frequent, mid-air was used more often than touch.
+For the second experiment users were free to choose which interface to use and during the experiment physical movements were required to simulate circumstances where it would be necessary to move away from the screen.
+The results revealed that in 42\% of the trails made, participants chose to use mid-air gestures and that for medium to large target sizes where move requests were infrequent or frequent, mid-air was used more often than touch.
 With 7 out of 10 participants preferring mid-air gestures for the second experiment, the cost of moving back and forth to use the touch interface would seem to make mid-air more preferable.
 
 % Code Space
 Bragdon et al. \cite{Bragdon:2011} created a system called Code Space to support developer meetings.
-The systems uses cross-device interaction techniques for participants to interactively participate and contribute by using hand gestures to point at and manipulate the content on screen and also use their handhelds and laptops to push and pull content to and from the shared screen.
+The systems uses cross-device interaction techniques for people to interactively participate and contribute to meetings by using hand gestures to point at and manipulate the content on the shared screen and also use their handhelds and laptops to push and pull content to and from the shared screen.
+Techniques for manipulating objects include mid-air pointing and moving objects and also using mid-air and phone to point and move objects on the screen.
+Techniques for sharing objects include pointing with phone and swiping to push content to the shared display \todo{not done!}
 They did a pilot evaluation and feedback from the participants resulted in an overall positive attitude towards the system with quotes that included \textit{``this is awesome'', ``cool'', ``this is Minority Report stuff, I love it'', ``everyone can participate''.}
 Also, participants generally felt that the interactions were socially acceptable to perform within their team of developers.
 
 \subsubsection{Using handheld devices} \label{sec:midAirPointingHandheld}
-We will explore the area of pointing in mid-air with a handheld device while using the handheld device, for example to interact with a large display.
-
 % This one is about pointing techniques where they are using handdeld devices (both smartphones and tablests)
-Nancel et al. \cite{Nancel:2013} focuses on high precision pointing techniques for acquiring targets on a large wall sized display.
+A study by Nancel et al. \cite{Nancel:2013} focuses on using handheld devices and high precision pointing techniques for acquiring targets on a large wall sized display.
 Their implementation uses the handheld device for controlling the pointer on the large display and a small area of the handheld device is used for relative pointing.
 One technique uses two fingers for coarse pointing and one finger for precision pointing. 
 Another technique they use is a head-based coarse pointing technique making it possible for the participants to roughly get the pointer close to the target using their head.
 They found that continuous head pointing is faster and more successful than their other techniques.
-A comparison showed that their technique performed as good as some state-of-the-art techniques and that it was in fact possible to maintain precision and screen real estate on the handheld device.
-%The two techniques both have a discrete and a continuous mode giving a total of 4 techniques that  were compared with each other but also compared to state-of-the-art techniques.
+A comparison showed that their technique performed as good as some state-of-the-art (LaserGyro based on \cite{Vogel:2005}) and SmoothPoint \cite{Gallo:2012}) techniques and that it was in fact possible to maintain precision and screen real estate on the handheld device.
+%The two techniques both have a discrete and a continuous mode giving a total of 4 techniques that were compared with each other and two techniques were also compared to two state-of-the-art techniques, LaserGyro (based on \cite{Vogel:2005}) and SmoothPoint \cite{Gallo:2012}.
 
 \subsection{Techniques for transfering data \& Target acquisition} \label{sec:targetAcquisition}
-In \emph{``Proximal and Distal Selection of Widgets''} Rashid et al. \cite{Rashid:2011} explores two different techniques for interacting with and acquiring targets on a large display using a handheld device.
+In \emph{``Proximal and Distal Selection of Widgets''} Rashid et al. \cite{Rashid:2011} explore two different techniques for interacting with and acquiring targets on a large display using a handheld device.
 The first technique is \emph{Proximal Selection (PS)} which pulls a selected, or zoomed-in, area of the large display onto the phone and the user will then be able to select the correct target.
 The other technique is \emph{Distal Selection (DS)} where the user will point at the large display, zoom-in on the selected area, and finally select the desired target on the large display.
-As a result of the experiment they found that, for complex tasks and with regards to time, \emph{PS} outperforms \emph{DS} but for simpler tasks \emph{DS} was approximately 0.1 sec faster and the effect was insignificant.
+In their experiment they found that, for complex tasks and with regards to time, \emph{PS} outperforms \emph{DS} but for simpler tasks \emph{DS} was approximately 0.1 sec faster and the effect was insignificant.
 The error rate for the techniques showed that \emph{DS} had fewer missed clicks for both small and large targets and that there was a significant difference for the small targets.
 
-Techniques for interacting with large displays using a handheld device such as a smartphone are numerous.
+Techniques for interacting with large displays using handheld devices such as smartphones are numerous.
 Different approaches have been documented in the literature and amongst them are throw and tilt gestures for interacting with large displays.
-Dachselt et al. \cite{Dachselt:2008} and Boring et al. \cite{Boring:2009} describes how a tilt technique with a handheld device can be used to control a pointer on a remote display.
+Dachselt et al. \cite{Dachselt:2008} and Boring et al. \cite{Boring:2009} describe how a tilt technique with a handheld device can be used to control a pointer on a remote display.
 In addition, Dachselt et al. describes a throwing gesture for transferring data (e.g. from a phone) to and from a large display and the application proposed also describe the concept of transferring an entire user interface between a phone and a display using the throw gesture.
 
 % Talk about Hespanhol:2012
