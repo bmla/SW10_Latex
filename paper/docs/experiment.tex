@@ -10,46 +10,43 @@ The first  experiment will be referred to as \target, and the second will be ref
 
 The four interaction techniques were implemented in a test application were the main goal was to correctly put shapes onto the screen from the smart phone or pull them away from the screen and put them on the phone.
 The shapes would represent data, and two shapes(square and circle) were used in order to simulate the effect of choice of data. 
+
 A grid system was implemented, were each target could be located in a particular grid cell.
 The grid had two different sizes.
 One was a large cell system, which had $5\times10$ cells, and each cell measured 61 pixels (7.3 cm) on each side.
 The other was a small cell system, with $10\times20$ cells, each cell measuring 122 pixels (14.6 cm)  on each side. 
 
-\todo[inline]{The original, without subsections for each experiment}
-Shapes would appear in the cells, filling 80\% of it. 
-These shapes would appear according to a predetermined series of locations, so that we could ensure that each target had an equal distribution of distances between them. 
-For the user, the sequence would appear as random. 
-These shapes would represent targets which the user had to hit.
-During the \accuracy, a white cross was added to the center of each shape to better direct the users to be as precise as possible while trying to hit the center of each shape.
-
-A blue circle was used to represent were the user is pointing on the screen
-This is were the user would ``hit'' whenever he performed an attempt with a given technique.
-During the \target, the circle would be solid blue, as well as having whichever cell the pointer was currently over being highlighted in a bright, yellow color.
-This can be seen in \Cref{fig:target}.
-During the \accuracy, the circle would be opaque so that the user could better see the cross that was added.
-The highlight was also removed so that users would not feel that hitting any location on the cell was acceptable. 
-This can be seen in \Cref{fig:accuracy}.
-
-\todo[inline]{The new, with two subsections, one for each experiment}
 Shapes would appear in the cells, filling 80\% of it. 
 These shapes would appear according to a predetermined series of locations, so that we could ensure that each target had an equal distribution of distances between them. 
 For the user, the sequence would appear as random. 
 These shapes would represent targets which the user had to hit.
 A blue circle was used to represent were the user is pointing on the screen
 This is were the user would ``hit'' whenever he performed an attempt with a given technique.
-There were then some differences between the two experiments, even though they were in fact very similar.
 
-\subsubsection{The Target Experiment} 
+\begin{figure}[H]
+	\subfloat[\push]{\includegraphics[width = 0.49\columnwidth]{images/pushScreen.pdf}\label{fig:pushScreen}}
+	\hspace{0.01\columnwidth}
+	\subfloat[\pull]{\includegraphics[width = 0.49\columnwidth]{images/pullScreen.pdf}\label{fig:pullScreen}}
+	\caption{The screens on both the large display and the phone for the \accuracy.}
+\end{figure}
+
+During the \push phase of each experiment, users would be presented with one shape on the screen and two on the smartphone, as seen in \cref{fig:pushScreen}.
+Here, the screen would tell the users what the correct shape was, and the user had to perform the correct gesture by selecting the correct shape on the phone.
+During the \pull phase of the experiment, users would be presented with two shapes on the large screen, and one shape on the smart phone.
+Here, the phone would be telling users what the correct shape was and users would have to grab the correct shape from the large display. 
+Within the experiment, we conducted two separate studies, using the same implementation of techniques and experimental method. 
+
+\subsubsection{Study One: The Target Experiment} 
 During the \target, The pointing circle was solid blue, 
-There was also a bright yellow highlight over whichever cell the pointer was currently over.
+There was also a bright yellow highlight in whichever cell the pointer was currently over.
 This can be seen in \Cref{fig:target}.
 This was for providing feedback to the user about whether or not he was hitting the correct cell. 
 
-\subsubsection{The Accuracy Experiment}
-During the \accuracy, we made added a white cross to each target to provide a precise point for the users to hit.
+\subsubsection{Study Two: The Accuracy Experiment}
+During the \accuracy, we added a white cross to each target to provide a precise point for the users to hit.
 The pointing circle was also made opaque so that users could better see the cross, as well as removing the highlight so that users would not feel that hitting any location on the cell was acceptable.
 This can be seen in \Cref{fig:accuracy}.
-We also explicitly asked users to be as precise as possible while performing each technique.
+In study two, we explicitly asked users to be as precise as possible while performing each technique.
 
 \begin{figure}[H]
 \centering
@@ -59,24 +56,12 @@ We also explicitly asked users to be as precise as possible while performing eac
 \caption{\protect\subref{fig:target} The targets in the first part of the experiment. \protect\subref{fig:accuracy} The targets in the second part of the experiment.}
 \end{figure}
 
-During the \push phase of each experiment, users would be presented with one shape on the screen and two on the smartphone, as seen in \cref{fig:pushScreen}.
-Here, the screen would tell the users what the correct shape was, and the user had to perform the correct gesture by selecting the correct shape on the phone.
-During the \pull phase of the experiment, users would be presented with two shapes on the large screen, and one shape on the smart phone.
-Here, the phone would be telling users what the correct shape was and users would have to grab the correct shape from the large display. 
-
-\begin{figure}[H]
-	\subfloat[\push]{\includegraphics[width = 0.49\columnwidth]{images/pushScreen.pdf}\label{fig:pushScreen}}
-	\hspace{0.01\columnwidth}
-	\subfloat[\pull]{\includegraphics[width = 0.49\columnwidth]{images/pullScreen.pdf}\label{fig:pullScreen}}
-	\caption{The screens on both the large display and the phone for the \accuracy.}
-\end{figure}
-
 \subsection{Experimental Setup} \label{sec:setup}
 % The setup and the hardware used in the experiment
 The experiment was conducted in laboratory setting where we setup a large 65'' screen (1920$\times$1080 pixels) and a smaller 42'' screen (1024$\times$768 pixels) as seen in \Cref{fig:setupPhoto}.
 A Microsoft Kinect v2 was mounted below the large display (81 cm above the floor) and we marked the floor with a cross (200 cm from the Kinect) where participants were instructed to stand on.
 We chose 200 cm from the display because this is an optimal operating distance for the Kinect.
-The placement of the Kinect with regards to the floor was chosen through physical adjustment to get the optimal position for a person who is 180 cm tall. 
+The height of the Kinect with regards to the floor was chosen through physical adjustment to get the optimal position for a person who is 180 cm tall, given that the average height of Danish men is 183 cm, and women is 169 cm. 
 The phone we used in this experiment was a Samsung Galaxy S2 (4.3'' screen).
 The setup is illustrated in \Cref{fig:setup}.
 
@@ -86,29 +71,30 @@ The setup is illustrated in \Cref{fig:setup}.
 \caption{\protect\subref{fig:setupPhoto} the setup in the usability lab. \protect\subref{fig:setup} illustrates the setup and distance between participant and screen, floor and Kinect, and floor and the bottom of the large display.}
 \end{figure}
 
-\subsubsection{Design} \label{}
+\subsubsection{Experimental Design} \label{}
 % (explain practice targets, targets, grid, before procedure and task section)
 % Also, explain sequences and the different distances between targets
-A within-group design was used for the experiment and each participant would use all 8 techniques once during the experiment.
+A within-group design was used for the experiment and each participant used all 8 techniques once during the experiment.
 We have 2 different target sizes (large, small) and 8 techniques (push = 4, pull = 4) as the independent variables.
 For each technique there are a total of 18 targets and 3 practice targets at the beginning of each technique. 
-Practice targets allows the participants to get familiar with the technique before we start collecting data for a technique.
+Practice targets allow the participants to get familiar with the technique before we start collecting data for a technique.
 The order in which the participants are presented with a technique is randomized to minimize the learning effect of each technique.
-For both \target and \accuracy 51\% of the participants started with \push techniques and 49\% started with \pull techniques.
-For the \target 27\% of the participants started the test with \grab, 21\% with \swipe, 25\% with \throw, and 27\% with \tilt.
-Similarly, for the \accuracy 22\% of the participants started the test with \grab, 27\% with \swipe, 24\% with \throw, and 27\% with \tilt.
-For \target the total amount of attempts collected were 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 51 participants = 7344 attempts and for \accuracy the total is 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 33 participants = 4752 attempts.
+For both \studyone: \target and \studytwo: \accuracy 51\% of the participants started with \push techniques and 49\% started with \pull techniques.
+For \studyone 27\% of the participants started the test with \grab, 21\% with \swipe, 25\% with \throw, and 27\% with \tilt.
+Similarly, for \studytwo 22\% of the participants started the test with \grab, 27\% with \swipe, 24\% with \throw, and 27\% with \tilt.
+For \studyone the total amount of attempts collected were 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 51 participants = 7344 attempts and for \studytwo the total is 2 target sizes $\times$ 8 techniques $\times$ 9 repetitions $\times$ 33 participants = 4752 attempts.
 
 \subsubsection{Participants}
-For the \target, 51 people took part in the experiment. They ranged in age from 21 to 52 (M: 27,98) and were between 1.56m and 1.98m (M: 1,79m). 
+For the \studyone: \target, 51 people took part in the experiment. They ranged in age from 21 to 52 (M: 27,98) and were between 1.56m and 1.98m (M: 1,79m). 
 15.7\% of participants were women, and 84.3\% were male.
 All of the participants owned smartphones and had owned one for 2-12 years (M:5.9).
 
-For the \accuracy, 33 people took part. They were anywhere between 20 and 55 years old (M: 23.18) and were between 1.56m and 2m tall (M: 1.77m).
+For the \studytwo: \accuracy, 33 people took part. They were anywhere between 20 and 55 years old (M: 23.18) and were between 1.56m and 2m tall (M: 1.77m).
 30.3\% of the participants were female, while 69.7\% were male.
 They had all owned smartphones between 1 and 9 years (M: 5.5).
 
 \subsubsection{Task \& Procedure} \label{sec:procedure}
+The task and procedure were the same for both studies, with the additional instructions in \studytwo to be as precise as possible.
 Before a participant starts the experiment, the general purpose of the study is explained to the participant and we inform them about what is going to happen.
 Then a demonstration video of a technique is shown on the large screen and after watching the video it plays in a loop on the small screen.
 The participant is then presented with the grid and one target after another will appear in the grid until the participant has attempted to hit all targets.

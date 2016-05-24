@@ -1,6 +1,6 @@
 % !TEX root = ../paper.tex
 \section{Discussion}\label{sec:discussion}
-When discussing the results we uncovered from our experiment, it's important to make sure that all terms used are clearly defined. When we talk about \emph{Effectiveness}, we talk about a techniques success rate, or how often it successfully hit the target on the screen. When talking about \emph{Efficiency}, we are referring to how fast a technique is to perform. Finally, when we talk about \emph{Accuracy}, we are talking about how precise the technique is, or how close to the center of the target the attempts for the technique was. 
+When discussing the results we uncovered from our experiment, it is important to make sure that all terms used are clearly defined. When we talk about \emph{Effectiveness}, we refer a technique's success rate, or how often it successfully hit the target on the screen. When talking about \emph{Efficiency}, we refer to how fast a technique is to perform. Finally, when we talk about \emph{Accuracy}, we are talking about how precise the technique is, or how close to the center of the target the attempt for the technique was. 
 
 \subsection{Effectiveness}
 
@@ -9,4 +9,42 @@ When looking at the results for the \push techniques, \grab has the highest effe
 If we look at the \pull techniques, we see \swipe having the highest success rate, followed by \throw and finally \grab. It is a very similar image to the \push techniques, having these three techniques lay very close to each other with they success rate, and \tilt being rather far behind.  
 
 It is interesting to note that while \grab, \swipe and \throw are almost equally effective, \tilt is rather far behind. This is also the technique that requires the user to operate it with one hand, as well as move the phone with one hand in order to activate the technique. The technique requires the user to perform a rather subtle movement with the same hand he is using to point at the screen with. This clearly effects the precision of the technique, as the pointer would almost always be dislocated from the location the user intended to hit due to the activation movement.
+
+\subsection{Efficiency}
+
+Once we start looking at the results regarding the efficiency of each technique, some rather interesting things come to light.
+
+We see that \swipe is the fastest technique by far.
+With an mean time pr. attempt of 3.78 seconds, it far outperforms the next fastest technique, \throw, at a mean time of 4.39 seconds per attempt. 
+One might have expected both one handed techniques to be the fastest, since there are very few steps that must be taken to activate these techniques, but \throw is faster than \tilt. 
+This can be due to a fact that people felt very uncomfortable with the \tilt technique.
+When performing it, users would be very cautious because the pointer tended to move a large distance after each attempt.
+This would lead to people performing very a very cautious and slow tilting movement with the phone, and thus not triggering the technique and having to perform it multiple times. 
+It is no surprise that \grab is the slowest technique, since this is by far the most complex technique, with the most number of steps needed in order to perform it.
+
+Another interesting thing to notice is that a successful attempt did not, in fact, have a significant effect on the time for each attempt.. 
+This does make sense once you consider it carefully: the aiming part of each technique is shared between all techniques and as such should take the same amount of time.
+Once the user has acquired the target, he starts performing the technique, and here is were the difference in time comes from.
+
+As such, it is not surprising to see that the target size does have a significant effect on time.
+The aiming process for the smaller targets takes longer, and affects all techniques similarly.
+
+We also note that the direction of each attempt did not have a significant effect on the efficiency of each technique. 
+This is because not all techniques are effected similarly by the direction. 
+While \swipe, \throw and \tilt all take less time to perform while pulling, \grab has the opposite effect.
+This can be explained once you examine the interaction between direction, technique and success.
+
+We noted that there was a significant interaction between direction, technique and success.
+Our pairwise comparisons show that this interaction comes the difference between the successful and unsuccessful attempts for the \grab \pull technique. 
+Here it shows that a unsuccessful attempt with the \grab \pull is significantly slower than a successful one. 
+This can be explained by the implementation of the technique. 
+Once the user closes his hand in an attempt to grab the shape on the screen, he is no longer allowed to retry, even if he missed.
+This is counter-intuitive to reality, were if someone was to miss a object he was grabbing after, he would simple open his hand and retry.
+This confused all our participants whenever they missed, as they would try to open their hand in order to get another attempt at grabbing the objects, but the system would not allow that.
+As such, the \grab \pull technique did not live up to the metaphor of grabbing and releasing objects in real life.
+This was an intentional design decision though, since none of the other techniques had the opportunity  of retrying the attempt.
+If we had allowed \grab \pull to do so, we would most likely have ended up with a 100\% precise technique. 
+
+\subsection{Accuracy}
+
 

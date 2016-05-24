@@ -1,17 +1,17 @@
 % !TEX root = ../paper.tex
 %http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_HypothesisTesting-ANOVA/BS704_HypothesisTesting-Anova_print.html
 \section{Results}\label{sec:results}
-Some data points needed to be removed from the experiments, in order to gain a clearer understanding of the data we gathered. 
+Some data points needed to be removed from the experiments, in order to gain a clearer understanding of the experimental outcomes. 
 
-From the \target, we started with a total of 7344 attempts.
-176 were removed because of system errors, were the system wrongly activated a technique attempt even though the user did not intend to do so.
+From \studyone: \target, we started with a total of 7344 attempts.
+176 were removed because of system errors, where the system wrongly activated a technique attempt even though the user did not intend to do so.
 Another 406 attempts were removed as outliers using the Outlier Labeling method described by Hoaglin and Iglewicz in Resistant Rules for Outlier Labeling \cite{Hoaglin:1987}.
-This gave us a total of 6762 attempts for the \target.
+This gave us a total of 6762 attempts for \studyone.
 
-From the \accuracy, we started with a total of 4752 attempts.
+From \studytwo: \accuracy, we started with a total of 4752 attempts.
 111 attempts were removed due to system errors. 
-Finally 138 attempts were removed with the same Outlier Labeling method used above.
-This gave us a total of 4503 attempts for the \accuracy.
+Another 138 attempts were removed with the same Outlier Labeling method used above.
+This gave us a total of 4503 attempts for \studytwo.
 
 \Cref{tab:numberOfAttempts} shows the final number of attempts each technique had in the two different experiments
 
@@ -19,18 +19,20 @@ This gave us a total of 4503 attempts for the \accuracy.
 	\centering
 	\textbf{Number of attempts}\\[4pt]
 	\begin{adjustbox}{width=\columnwidth}
-		\subfloat[\target]{
+		{
 			\def\arraystretch{1.5}
 			\begin{tabular}{c c c c c}
+				& \multicolumn{4}{c}{\textbf{STUDY ONE}} \\
 				\cline{2-5}
 				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
 				\textbf{Push} & 830 & 835 & 814 & 862 \\ \hline
 				\textbf{Pull} & 784 & 893 & 867 & 877 \\ \hline
 			\end{tabular}
 		}
-		\subfloat[\accuracy] {
+		{
 			\def\arraystretch{1.5}
 			\begin{tabular}{c c c c c}
+				& \multicolumn{4}{c}{\textbf{STUDY TWO}} \\
 				\cline{2-5}
 				& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
 				\textbf{Push} & 551 & 576 & 561 & 582 \\ \hline
@@ -38,47 +40,44 @@ This gave us a total of 4503 attempts for the \accuracy.
 			\end{tabular}
 		}
 	\end{adjustbox}
-	\caption{Number of attempts for each technique in each experiment}
+	\caption{Number of attempts for each technique in each study}
 	\label{tab:numberOfAttempts}
 \end{table}
 
-\subsection{Success rate}
-The success rate is based on the data collected during the \target. 
-Here we present results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results. 
+\subsection{STUDY ONE: Success rate}
+Here we present results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results in \studyone. 
 
-To see whether or not each technique had an effect on the effectiveness of each attempt, and was not just noise, we performed a Pearsons Chi-Square test on both data sets. 
+To see whether or not each technique had an effect on the success rate of each attempt, and was not just noise, we performed a Pearsons Chi-Square test on both data sets. 
 For the \push techniques, $X(3)=121.950$, $p<0.001$, and for the \pull techniques we got $X(3)=438.473$, $p<0.001$. 
-This means that both \push and \pull techniques had a significant effect on the effectiveness of each attempt, and was not purely coincidence. 
+This means that both \push and \pull techniques had a significant effect on the success rate of each attempt, and was not purely coincidental. 
 \Cref{tab:successRate} shows the success rate for each of the techniques. 
 
 \begin{table}[H]
 	\centering
 	\def\arraystretch{1.5}
 		\begin{tabular}{c c c c c}
-			\cline{2-5}
 			& \multicolumn{4}{c}{\textbf{Hit Success Means}} \\
 			\cline{2-5}
 			& \textbf{Grab} & \textbf{Swipe} & \textbf{Throw} & \textbf{Tilt} \\ \hline
 			\textbf{Push} & 95.9\% & 96\% & 93.2\% & 83.3\% \\ \hline
 			\textbf{Pull} & 94\% & 97.5\% & 96.7\% & 71.8\% \\ \hline
 		\end{tabular}
-	\caption{Success rate for each technique in \target}
+	\caption{Success rate for each technique in \studyone}
 	\label{tab:successRate}
 \end{table}
 
-\subsection{Time taken}
-The time taken results are based on the \target.
-Here, we present results in regards to how long each user took in performing each technique. 
+\subsection{STUDY ONE: Time taken}
+Here, we present results in regards to how long each user took in performing each technique in \studyone. 
 When discussing these results, we will be referring to a technique's efficiency.
 
-We performed a linear mixed effects model analysis on the data to see if how time was affected by the different aspects of our experiment. 
-We found out that effectiveness had no effect on the time each user took per attempt ($F_{1,6706.785} = 2.283, p = 0.131$), and neither had the direction of the technique ($F_{1,6695.822} = 1.952, p = 0.162$). 
-The target size ($F_{1,6695.228} = 91.634, p < 0.001$) and the technique  ($F_{1,6695.228} = 91.634, p < 0.001$) though did have significant effects on the time taken per attempt. 
+We performed a linear mixed effects model analysis on the data to see how time was affected by the different aspects of our experiment. 
+We found out that a successful hit had no effect on the time each user took per attempt ($F_{1,6706.785} = 2.283, p = 0.131$), and neither had the direction of the technique ($F_{1,6695.822} = 1.952, p = 0.162$). 
+However, the target size ($F_{1,6695.228} = 91.634, p < 0.001$) and the technique  ($F_{1,6695.228} = 91.634, p < 0.001$) did have significant effects on the time taken per attempt. 
 We performed a post-hoc LSD pairwise comparison on the techniques to see how each technique differed from one another and found that all techniques were significantly different $(p<0.001)$ from each other. 
 
 We also found that there were other interactions between the variables that were affecting the time for each attempt differently. 
 $Direction \times Technique$  ($F_{3,6694.657} = 52.272, p < 0.001$), $Effectiveness \times Technique$  ($F_{3,6696.169} = 5.227, p < 0.001$) and finally $Effectiveness \times Direction \times Technique$  ($F_{3,6696.038} = 10.235, p < 0.001$) all showed to be significant interactions. 
-We then ran another post-hoc LSD pairwise test between successful and failed techniques for each technique and direction to see were that significance was. 
+We then ran another post-hoc LSD pairwise test between successful and failed techniques for each technique and direction to see where that significance was. 
 The only significantly different pair was between the \grab \push and \grab \pull techniques $(p < 0.001)$.
 
 Below you can find the means for each technique and direction in \cref{fig:efficiencyGraph}
@@ -93,9 +92,8 @@ Below you can find the means for each technique and direction in \cref{fig:effic
 	\label{fig:efficiencyGraph}
 \end{figure}
 
-\subsection{Distance from target}
-The data that was used to measure the distance from the target was based on the \accuracy experiment.
-Here we present the results in regards to how far away from the center of the target (in pixels) each user was when performing the technique. 
+\subsection{STUDY TWO: Distance from target}
+Here we present the results in regards to how far away from the center of the target (in pixels) each user was when performing the technique in \studytwo. 
 This is referred to as a techniques accuracy when we discuss the results. 
 
 We performed a linear mixed effects model analysis on the data to see if each technique had a significant effect on the accuracy of each attempt. 
@@ -107,8 +105,8 @@ We then performed a post-hoc LSD pairwise comparison between the techniques to s
 
 We also found that the interaction between direction and technique also had a significant effect on the accuracy of each attempt($F_{3,4457.354}=8.882, p<0.001$). 
 We then performed another LSD pairwise comparison of each technique with the same direction. 
-We found that the only pair that was insignificantly different from each other was the \push \grab and \throw ($p=0.508$). 
-All other were significantly different from one another ($p<0.004$). 
+We found that the only pair that was not significantly different from each other was between the \pull versions of the \grab and \throw techniques. ($p=0.508$). 
+All others were significantly different from one another ($p<0.004$). 
 
 Below you can see the mean for each technique and direction in \cref{fig:accuracyGraph}
 \begin{figure}[H]{
