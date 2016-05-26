@@ -34,8 +34,7 @@ This is because not all techniques are effected similarly by the direction.
 While \swipe, \throw and \tilt all take less time to perform while pulling, \grab has the opposite effect.
 This can be explained once you examine the interaction between direction, technique and success.
 
-We noted that there was a significant interaction between direction, technique and success.
-Our pairwise comparisons show that this interaction comes the difference between the successful and unsuccessful attempts for the \grab \pull technique. 
+Our pairwise comparisons show that the significant interaction between direction, technique and success comes the from difference between the successful and unsuccessful attempts for the \grab \pull technique. 
 Here it shows that a unsuccessful attempt with the \grab \pull is significantly slower than a successful one. 
 This can be explained by the implementation of the technique. 
 Once the user closes his hand in an attempt to grab the shape on the screen, he is no longer allowed to retry, even if he missed.
@@ -46,5 +45,15 @@ This was an intentional design decision though, since none of the other techniqu
 If we had allowed \grab \pull to do so, we would most likely have ended up with a 100\% precise technique. 
 
 \subsection{Accuracy}
+We see that out of the four techniques, \swipe was also the most accurate technique, having a mean of 13.27 pixels from the center of each target. 
+This is closely followed by \throw, with 15.65 pixels, and \grab, with 17.22 pixels.
+The \tilt technique trails far behind, with a mean distance of 30.31 pixels from the center of each target.   
+It is no surprise that \tilt is so far behind, since it requires the user to do a really subtle movement with the same hand they are pointing with.
+This usually leads to the pointer being moved away from its original placement since it is very hard to adjust the placement of the hand in such a way as to take into account the coming activation movement. 
+Several users attempted to place th pointer slightly below the target to compensate for the movement. 
 
+It is again interesting to note that direction has no effect on the accuracy of the attempt. 
+This points to the symmetry of our techniques, and that both the \pull and the \push versions of each technique share very similar pointing methods.
 
+Even though we asked our participants to be as precise as possible and aim for the white cross in the middle of the target, we see that the target size actually does have an effect.
+This is because participants still felt some leeway when faced with a larger target and did not 
