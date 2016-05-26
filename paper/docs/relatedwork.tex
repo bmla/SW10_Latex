@@ -1,5 +1,6 @@
 % !TEX root = ../paper.tex
 \section{Related work} \label{sec:relatedwork}
+\todo[inline]{Note: This section still need to be arranged in a logical order. Some paragraphs are (most likely) not in the correct position now.}
 In this section we present related work which has been done in the area of techniques for transferring information and data between mobile devices and displays.
 We also present developments within the topics of pointing in mid-air and controlling a cursor on a display at a distance.
 
@@ -74,9 +75,15 @@ Hespanhol et al. \cite{Hespanhol:2012} proposes a set of five mid-air gestures t
 Each of their gestures are described with a scenario in which a given gesture is commonly used e.g. a \emph{push} gesture for pressing a button or a \emph{grab} gesture with the scenario of grabbing a physical object which can then also be moved around.
 Results showed that \emph{dwelling} and \emph{grabbing} were the two fastest gestures for selecting and rearranging respectively and they were also the two gestures with the lowest amount of failures for both tasks.
 
-
 % Talk about Put-That-There (that old paper from 1984)
+\todo[inline]{Mention the \emph{Put-That-There} paper from 84 using voice and gestures.}
 
-In the literature, research on different approaches to pointing and controlling e.g virtual pointers on a screen have been documented. \todo{using these technologies? does what? not sure what this sentence is aimed at.}
+In the literature, research on different approaches to pointing and controlling e.g virtual pointers on a screen \todo{using these technologies? does what? not sure what this sentence is aimed at.} has been done by Mayer et al. and Vogel et al. among others.
+Mayer et al. presents a study on 3 techniques for absolute distant pointing without visual feedback to see how precise participants were with the three techniques and if the precision could be improved.
+They found that for the most precise technique (\emph{index finger ray casting}) the average error was 61.3 cm before applying a correction model.,
+Using the correction model on the same technique they found that the average error could be reduced by 37.3\% for both sitting and standing at different distances from the display.
+In other words pointing techniques without visual feedback can benefit greatly from correction models.
+Vogel et al. experimented with three pointing techniques to acquire targets on a very large display with high resolution and their findings show that a \emph{RayCasting} technique (extends a ray from the index finger) is significantly faster than \emph{Relative} and \emph{RayToRelative} (combination) techniques.
+In contrast, error rates are far lower for the two relative techniques and the largest difference between \emph{RayCasting} and the relative techniques are for medium to small target sizes indicating that \emph{RayCasting} is less accurate for smaller targets.
 % Talk about Mayer et al. Modeling Distant Pointing for Compensating Systematic Displacements
-% and 
+% and Vogel et al. Distant Freehand Pointing and Clicking on Very Large, High Resolution Displays 
