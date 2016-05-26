@@ -1,14 +1,26 @@
 % !TEX root = ../paper.tex
 \section{Discussion}\label{sec:discussion}
-When discussing the results we uncovered from our experiment, it is important to make sure that all terms used are clearly defined. When we talk about \emph{Effectiveness}, we refer a technique's success rate, or how often it successfully hit the target on the screen. When talking about \emph{Efficiency}, we refer to how fast a technique is to perform. Finally, when we talk about \emph{Accuracy}, we are talking about how precise the technique is, or how close to the center of the target the attempt for the technique was. 
+When discussing the results we uncovered from our experiment, it is important to make sure that all terms used are clearly defined. When we talk about \emph{Effectiveness}, we refer to a technique's success rate, or how often it successfully hit the target on the screen. When talking about \emph{Efficiency}, we refer to how fast a technique is to perform. Finally, when we talk about \emph{Accuracy}, we are talking about how precise the technique is, or how close to the center of the target the attempt for the technique was. 
 
 \subsection{Effectiveness}
 
-When looking at the results for the \push techniques, \grab has the highest effectiveness of all the techniques, followed by \swipe, then \throw and finally \tilt. It is interesting to note that the \grab and \swipe are incredibly close to each other, with \throw trailing closely behind. 
+When looking at the results for the \push techniques, all techniques, with the exception of \throw, had a significant association with the success rate of each attempt.
+The \push techniques had an expected success rate of 92.02\%, in which \grab (95.9\%) and \swipe (96\%) clearly surpassed.
+The \tilt technique had a much lower success rate(83.3\%), while \throw did not have a significant association with the success rate.
 
-If we look at the \pull techniques, we see \swipe having the highest success rate, followed by \throw and finally \grab. It is a very similar image to the \push techniques, having these three techniques lay very close to each other with they success rate, and \tilt being rather far behind.  
+If we look at the results for the \pull techniques, which had an expected success rate of 89.92\%, all of them had a significant association with the success rate of each attempt.  
+The \swipe technique was clearly the most effective technique, with a success rate of 97.5\%, trailing closely by \throw (96.4\%) and \grab (94\%). 
+The \tilt technique falls far behind with a success rate of only 71.5\%. 
 
-It is interesting to note that while \grab, \swipe and \throw are almost equally effective, \tilt is rather far behind. This is also the technique that requires the user to operate it with one hand, as well as move the phone with one hand in order to activate the technique. The technique requires the user to perform a rather subtle movement with the same hand he is using to point at the screen with. This clearly effects the precision of the technique, as the pointer would almost always be dislocated from the location the user intended to hit due to the activation movement.
+It is unclear why specifically the \push version of the \throw technique does not have a significant association with success.
+This could possible be because the pulling motion of the \throw technique was less familiar to participants and as such lead to a more careful, precise motion.
+This effect can also be seen when we discuss accuracy, where users were explicitly asked to be more precise.
+This lead to the \push and \pull version being much more closely related, since users were performing more careful and precise motions in both directions. 
+
+In order to properly determine this, further experiments must be conducted.
+We can see though that \swipe and \grab are both incredibly effective techniques, both while pushing and pulling information from a display.
+
+
 
 \subsection{Efficiency}
 
@@ -56,4 +68,8 @@ It is again interesting to note that direction has no effect on the accuracy of 
 This points to the symmetry of our techniques, and that both the \pull and the \push versions of each technique share very similar pointing methods.
 
 Even though we asked our participants to be as precise as possible and aim for the white cross in the middle of the target, we see that the target size actually does have an effect.
-This is because participants still felt some leeway when faced with a larger target and did not 
+This is likely related to the idea that the shape itself is still the target. 
+Once the users aim as close as possible to the center of the shape, they prepare themselves to perform the gesture. 
+The pointer also starts to deviate from the center since it is almost impossible to hold the pointer completely still for the duration of the technique.
+Since there is not much leeway before the pointer leaves that target, users must realign the pointer in case it were to leave the center of the shape before performing the technique.
+This is not the case with the larger targets, were the pointer is allowed to deviate more from the center before it actually leaves the shape, and as such not prompting the need to realign the pointer towards the center, since it is still inside the shape. 

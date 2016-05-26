@@ -45,11 +45,11 @@ This gave us a total of 4503 attempts for \studytwo.
 \end{table}
 
 \subsection{STUDY ONE: Success rate}
-Here we present results relating to whether or not the user hit the target, which we will be referring to as effectiveness when discussing the results in \studyone. 
+Here we present results relating to whether or not the user was successful in hit the target, which we will be referring to as effectiveness when discussing the results in \studyone. 
 
-To see whether or not each technique had an effect on the success rate of each attempt, and was not just noise, we performed a Pearsons Chi-Square test on both data sets. 
-For the \push techniques, $X(3)=121.950$, $p<0.001$, and for the \pull techniques we got $X(3)=438.473$, $p<0.001$. 
-This means that both \push and \pull techniques had a significant effect on the success rate of each attempt, and was not purely coincidental. 
+To see whether or not each technique had an association with the success rate of each attempt, and was not just noise, we performed a Pearsons Chi-Square test.
+For the \push techniques, $X^2(3)=121.950$, $p<0.001$, and for the \pull techniques we got $X^2(3)=438.473$, $p<0.001$. 
+This means that both \push and \pull techniques had an association with the success rate of each attempt.
 \Cref{tab:successRate} shows the success rate for each of the techniques. 
 
 \begin{table}[H]
@@ -66,6 +66,10 @@ This means that both \push and \pull techniques had a significant effect on the 
 	\label{tab:successRate}
 \end{table}
 
+We then looked at each technique individually to see where the association may be.
+Our post-hoc tests show that the \push \throw technique did not have a significant association ($p=0.55$) with the success rate of each attempt.
+All other techniques had a significant association ($p<0.004$) with the success rate of each attempt. 
+
 \subsection{STUDY ONE: Time taken}
 Here, we present results in regards to how long each user took in performing each technique in \studyone. 
 When discussing these results, we will be referring to a technique's efficiency.
@@ -78,9 +82,9 @@ We performed a post-hoc LSD pairwise comparison on the techniques to see how eac
 We also found that there were other interactions between the variables that were affecting the time for each attempt differently. 
 $Direction \times Technique$  ($F_{3,6694.657} = 52.272, p < 0.001$), $Effectiveness \times Technique$  ($F_{3,6696.169} = 5.227, p < 0.001$) and finally $Effectiveness \times Direction \times Technique$  ($F_{3,6696.038} = 10.235, p < 0.001$) all showed to be significant interactions. 
 We then ran another post-hoc LSD pairwise test between successful and failed techniques for each technique and direction to see where that significance was. 
-The only significantly different pair was between the \grab \push and \grab \pull techniques $(p < 0.001)$.
+The only significantly different pair was between a success and unsuccessful attempt of a \grab \pull technique $(p < 0.001)$.
 
-Below you can find the means for each technique and direction in \cref{fig:efficiencyGraph}
+\Cref{fig:efficiencyGraph} shows the mean time taken for each technique and direction.
 
 \begin{figure}[H]{
 	\centering
@@ -108,7 +112,7 @@ We then performed another LSD pairwise comparison of each technique with the sam
 We found that the only pair that was not significantly different from each other was between the \pull versions of the \grab and \throw techniques. ($p=0.508$). 
 All others were significantly different from one another ($p<0.004$). 
 
-Below you can see the mean for each technique and direction in \cref{fig:accuracyGraph}
+\Cref{fig:accuracyGraph} shows the mean distance from the center for each technique and direction.
 \begin{figure}[H]{
 	\centering
 	\textbf{Accuracy}\\[4pt]
