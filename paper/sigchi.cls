@@ -455,7 +455,8 @@
 \newcount\sectioncntr
 \global\sectioncntr=1
 
-\setcounter{secnumdepth}{0}
+% Here it is.. this is the God damn section numbers :D
+\setcounter{secnumdepth}{2}
 
 \def\appendix{\par
 \section*{APPENDIX}
