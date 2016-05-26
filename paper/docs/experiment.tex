@@ -24,10 +24,19 @@ A blue circle was used to represent were the user is pointing on the screen
 This is were the user would ``hit'' whenever he performed an attempt with a given technique.
 
 \begin{figure}[H]
-	\subfloat[\push]{\includegraphics[width = 0.49\columnwidth]{images/pushScreen.pdf}\label{fig:pushScreen}}
+	\begin{minipage}[c]{.12\columnwidth}
+	\centering
+	\subfloat[]{\includegraphics[width = 1\columnwidth]{images/target.pdf}\label{fig:target}}\\
+	\subfloat[]{\includegraphics[width = 1\columnwidth]{images/accuracy.pdf}\label{fig:accuracy}}
+	\end{minipage}%
 	\hspace{0.01\columnwidth}
-	\subfloat[\pull]{\includegraphics[width = 0.49\columnwidth]{images/pullScreen.pdf}\label{fig:pullScreen}}
-	\caption{The screens on both the large display and the phone for the \accuracy.}
+	\begin{minipage}[c]{.88\columnwidth}
+	\centering
+	\subfloat[\push]{\includegraphics[width = 0.48\columnwidth]{images/pushScreen.pdf}\label{fig:pushScreen}}
+	\hspace{0.01\columnwidth}
+	\subfloat[\pull]{\includegraphics[width = 0.48\columnwidth]{images/pullScreen.pdf}\label{fig:pullScreen}}
+	\end{minipage}
+	\caption{\protect\subref{fig:target} The targets in the first part of the experiment. \protect\subref{fig:accuracy} The targets in the second part of the experiment. \protect\subref{fig:pushScreen} and \protect\subref{fig:pullScreen} show the screens on both the large display and the phone for the \accuracy.}
 \end{figure}
 
 During the \push phase of each experiment, users would be presented with one shape on the screen and two on the smartphone, as seen in \cref{fig:pushScreen}.
@@ -47,14 +56,6 @@ During the \accuracy, we added a white cross to each target to provide a precise
 The pointing circle was also made opaque so that users could better see the cross, as well as removing the highlight so that users would not feel that hitting any location on the cell was acceptable.
 This can be seen in \Cref{fig:accuracy}.
 In study two, we explicitly asked users to be as precise as possible while performing each technique.
-
-\begin{figure}[H]
-\centering
-\subfloat[]{\includegraphics[width = 0.13\columnwidth]{images/target.pdf}\label{fig:target}}
-\hspace{0.05\columnwidth}
-\subfloat[]{\includegraphics[width = 0.13\columnwidth]{images/accuracy.pdf}\label{fig:accuracy}}
-\caption{\protect\subref{fig:target} The targets in the first part of the experiment. \protect\subref{fig:accuracy} The targets in the second part of the experiment.}
-\end{figure}
 
 \subsection{Experimental Setup} \label{sec:setup}
 % The setup and the hardware used in the experiment
