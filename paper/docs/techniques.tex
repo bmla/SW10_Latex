@@ -24,14 +24,15 @@ There were several criteria behind the choice of these techniques.
 %Two-handed techniques which are techniques that require both hands.
 
 
-Technique chosen were found in the literature, some with minor modifications.
+The techniques chosen were found in the literature, some with minor modifications.
 We then created a symmetrical version of each technique so they would have both a \push and \pull version.
 \push means that the user is pushing data from the mobile to the large display, and \pull means the user will pull data from the screen onto the mobile device. 
 
 Eight techniques were used in the experiment: \alltechniques, each with a \push and \pull variant.
 
 The \grab technique is based on a grabbing gesture presented by Hespanhol et al. \cite{Hespanhol:2012} as one of five proposed gestures.
-A related technique is described by Markussen et al. \cite{Markussen:2014} they present a mid-air word-gesture keyboard named \emph{``Vulture''} that uses a pinch gesture (touching index finger to thumb) to give the user control of the pointer which can then be used to select letters.
+A related technique is described by Markussen et al. \cite{Markussen:2014}. 
+They present a mid-air word-gesture keyboard named \emph{``Vulture''} that uses a pinch gesture (touching index finger to thumb) to give the user control of the pointer which can then be used to select letters.
 A variation of the \grab technique (\cref{fig:grabTechnique}) is used in \emph{Memory Stones} \cite{Ikematsu:2015} by Ikemasu et al. as part of a system for exchanging information between different devices. Benko and Wilson \cite{Benko:2010} used the \grab technique in a system where the user interacts with visualizations inside a dome. \grab is a combination of the grabbing gesture and the pointing technique used by Scheible et al. \cite{Scheible:2008}.
 This technique was chosen because we wanted to simulate the feeling of picking up an object of interest and placing it in a desired location.
 \grab is a complex technique, requiring a series of steps as well as using both hands to complete the interaction.
@@ -40,9 +41,7 @@ The user then raises his closed hand and uses it as a pointer on the screen to i
 The final step is to open the hand and release the object onto the large display, where he was aiming (\cref{fig:grabTechniqueC}).
 The \pull version is a bit different.
 The user first places his open hand, used as a pointer, over the position of the object of interest on the large display (\cref{fig:grabTechniqueC}).
-The user then closes his hand over the object (\cref{fig:grabTechniqueB}) and finally places it on his phone by touching the screen with his closed hand (\cref{fig:grabTechniqueA}).  
-
-\todo[inline]{pictures have to be made anew. they dont fit the new push pull idea}
+The user then closes his hand over the object (\cref{fig:grabTechniqueB}) and finally places it on his phone by touching the screen with his closed hand (\cref{fig:grabTechniqueB}).  
 
 \begin{figure}[H]
 	\subfloat[]{\includegraphics[width = 0.33\columnwidth]{images/techniques/grabPush1.jpg}\label{fig:grabTechniqueA}}
@@ -93,11 +92,11 @@ If he is pushing, then he swings towards the screen(\cref{fig:throwTechniqueC}),
 
 The \tilt technique (\cref{fig:tiltTechnique}) is used by Lucero et al. in \emph{MobiComics} \cite{Lucero:2012}.
 They created a system in which users would transfer objects from a large display onto their mobile devices.
-The \throw technique was chosen because it is a one handed, low complexity technique with few steps needed to activate it. 
-Just like the \swipe technique it is easy, intuitive and straight forward. 
+The \tilt technique was chosen because it is a one handed, low complexity technique with few steps needed to activate it. 
+Just like the \swipe technique it is easy, straight forward and feels natural to use. 
 The \tilt technique is performed as follows:
 The user first points at the target location with the phone (\cref{fig:tiltTechniqueA}).
-If the user is performing a \push technique, he tilts the phone away from himself(\cref{fig:tiltTechniqueB}).
+If the user is performing a \push technique, he tilts the phone away from himself(\cref{fig:tiltTechniqueB}, \cref{fig:tiltTechniqueC}).
 If he is performing a \pull technique, he does the opposite and tilts the phone towards himself. 
 
 \begin{figure}[H]
@@ -110,13 +109,6 @@ If he is performing a \pull technique, he does the opposite and tilts the phone 
 
 All techniques that were chosen have been used in other research systems to facilitate the interaction between mobile devices and large public displays.
 They differ in the way they are activated as well as the number of hands that are used to perform the technique.
-For our two handed techniques, we have \throw and \grab, and for our one handed techniques we have \tilt and \swipe. 
+For our two handed techniques, we have \throw and \grab, and for one handed techniques we have \tilt and \swipe. 
 Each technique also has different ways to activate it. 
 The \throw and \tilt techniques require the user to move the phone, whereas the \swipe and \grab techniques require the user to touch and manipulate the screen of the device in order to activate them. 
-
-\todo[inline]{something here for the next paragraph? no note, just an asterix}
-All the techniques used in this experiment require some combination of mid-air pointing, touch gestures and phone movements to perform. 
-These were all implemented using the Microsoft Kinect V2 as well as the accelerometer and touch sensors on the phone. 
-The Kinect utilizes its depth camera in order to give information about a users location in physical space, allowing us to track the position of the users hands and building the techniques around that. 
-The touch sensor on the phone was used in order to recognize touch and swipe gestures.
-The accelerometer was used to detect significant movement on the phone and use that for the \tilt and \throw techniques. 
