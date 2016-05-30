@@ -1,6 +1,5 @@
 % !TEX root = ../paper.tex
 \section{Related work} \label{sec:relatedwork}
-\todo[inline]{Note: This section still need to be arranged in a logical order. Some paragraphs are (most likely) not in the correct position now.}
 In this section we present related work which has been done in the area of techniques for transferring information and data between mobile devices and displays.
 We also present developments within the topics of pointing in mid-air and controlling a cursor on a display at a distance.
 
@@ -9,6 +8,10 @@ The interaction techniques for large displays most commonly used are touch and m
 For pointing in mid-air there are different technologies such as Microsoft Kinect and Microsofts's new mixed reality glasses, named HoloLens.
 With HoloLens, the controlling interface is hand gestures combining the physical 3D world with the virtual or augmented reality made possible with the HoloLens.
 Using mid-air gestures can also make the physical space we move around in combine more seamlessly with what we see on a large display.
+
+% Talk about Put-That-There (that old paper from 1984)
+In 1984, Bolt \cite{Bolt:1980} demonstrated a system utilizing voice recognition and gesture input for creating, moving, deleting, and  manipulating objects on a large screen.
+The system combines the two technologies and creates an interface capable of receiving voice commands i.e. \textit{``Create a blue square''}  and coupling it with a pointing gesture and the word \textit{``there''}.
 
 % This is the Off-Limits paper
 Using a large display and mid-air pointing, Markussen et al. \cite{Markussen:2016} explored an interaction concept called \emph{Off-Limits} in which the user is able to interact with a large display outside the boundaries of the screen.
@@ -38,6 +41,23 @@ Another technique is transient sharing from e.g. a handheld device, which is per
 A pilot evaluation was conducted and feedback from the participants indicated an overall positive attitude towards the system with comments such as \textit{``this is awesome'', ``cool'', ``this is Minority Report stuff, I love it'', ``everyone can participate''.}
 Also, participants generally felt that the interactions were socially acceptable to perform within their team of fellow developers.
 
+\subsection{Target acquisition using hands} \label{sec:targetAcquisitionHands}
+% Ray casting with Mayer et al. Modeling Distant Pointing for Compensating Systematic Displacements
+% and Vogel et al. Distant Freehand Pointing and Clicking on Very Large, High Resolution Displays 
+In the literature, research on different approaches to pointing and controlling e.g virtual pointers on a screen using hands and fingers has been done by Mayer et al. \cite{Mayer:2015} and Vogel et al. \cite{Vogel:2005} among others.
+Mayer et al. presents a study on 3 techniques for absolute distant pointing without visual feedback to see how precise participants were with the three techniques and if the precision could be improved.
+They found that for the most precise technique (\emph{index finger ray casting}) the average error was 61.3 cm before applying a correction model.
+Using a correction model on the same technique they found that the average error could be reduced by 37.3\% for both sitting and standing at different distances from the display.
+This means that pointing techniques without visual feedback can benefit greatly from correction models.
+Vogel et al. experimented with three pointing techniques to acquire targets on a very large display with high resolution and their findings show that a \emph{RayCasting} technique (extends a ray from the index finger) is significantly faster than two other techniques, \emph{Relative} and \emph{RayToRelative} (a combination of \emph{RayCasting} and \emph{Relative}).
+In contrast, error rates are far lower for the two relative techniques and the largest difference between \emph{RayCasting} and the relative techniques are for medium to small target sizes indicating that \emph{RayCasting} is less accurate for smaller targets.
+
+% Investigating Intuitiveness and Effectiveness of Gestures for Free Spatial Interaction with Large Displays
+Hespanhol et al. \cite{Hespanhol:2012} proposes a set of five mid-air gestures to perform selections and rearrange items on a large display using only hands.
+Each of their gestures are described with a scenario in which a given gesture is commonly used e.g. a \emph{push} gesture for pressing a button or a \emph{grab} gesture with the scenario of grabbing a physical object which can then also be moved around.
+Results showed that \emph{dwelling} and \emph{grabbing} were the two fastest gestures for selecting and rearranging respectively and they were also the two gestures with the lowest amount of failures for both tasks.
+
+\subsection{Target acquisition using handheld devices} \label{sec:midAirPointingHandheld}
 % Scroll, tilt or move it
 Boring et al. \cite{Boring:2009} experimented with using mobile phones to control a cursor on large displays with three different interaction techniques to move the cursor.
 The three techniques were \emph{Scroll} (using buttons on the phone to move pointer), \emph{Tilt} (tilting the phone to move pointer), and \emph{Move} (moving the phone in a direction to move the pointer in the same direction).
@@ -46,7 +66,6 @@ Results showed that for both larger target sizes and smaller distances the selec
 For error rates, the results show that short distances and larger target sizes reduce the error rate while the technique with lowest error rate was \emph{Scroll}.
 Questionnaires showed that for general comfort there was no trend towards any single technique but \emph{Scroll} was significantly ``easier to use'' than \emph{Tilt}, which participants seemed frustrated using.
 
-\subsubsection{Using handheld devices} \label{sec:midAirPointingHandheld}
 % This one is about pointing techniques where they are using handdeld devices (both smartphones and tablests)
 A study by Nancel et al. \cite{Nancel:2013} focuses on using handheld devices and high precision pointing techniques for acquiring targets on a large wall sized display.
 Their implementation uses the handheld device for controlling the pointer on the large display and a small area of the handheld device is used for relative pointing.
@@ -57,28 +76,14 @@ A comparison showed that their technique performed as good as some state-of-the-
 They showed that it was in fact possible to maintain precision and ample screen real estate on the handheld device.
 %The two techniques both have a discrete and a continuous mode giving a total of 4 techniques that were compared with each other and two techniques were also compared to two state-of-the-art techniques, LaserGyro (based on \cite{Vogel:2005}) and SmoothPoint \cite{Gallo:2012}.
 
-\subsection{Techniques for transfering data \& Target acquisition} \label{sec:targetAcquisition}
 Rashid et al. \cite{Rashid:2011} explore two different techniques for interacting with and acquiring targets on a large display using a handheld device.
 The first technique is \emph{Proximal Selection (PS)} which pulls a selected, or zoomed in, area of the large display onto the phone and the user is then able to select the correct target.
 The second technique is \emph{Distal Selection (DS)} where the user points at the large display, zooms in on the selected area, and finally selects the desired target on the large display.
 In their experiment they found that, for complex tasks and with regards to time, \emph{PS} outperforms \emph{DS} but for simpler tasks \emph{DS} was approximately 0.1 seconds faster but the effect was not significant.
-The error rate for the techniques showed that \emph{DS} had fewer missed clicks for both small and large targets and that there was a significant difference for the small targets. \todo{meaning?}
+The error rate for the techniques showed that \emph{DS} had fewer missed clicks for both small and large targets and that \emph{DS} had a significantly lower error rate than \emph{PS} only for small targets.
 
-Techniques for interacting with large displays using handheld devices such as smartphones are numerous.
-Different approaches have been documented in the literature and amongst them are throw and tilt gestures for interacting with large displays.
-Dachselt et al. \cite{Dachselt:2008} and Boring et al. \cite{Boring:2009} describe how a tilt technique with a handheld device can be used to control a pointer on a remote display.
-In addition, Dachselt et al. describe a throwing gesture for transferring data (e.g. from a phone) to and from a large display and the application proposed also uses the concept of transferring an entire user interface between a phone and a display using the throw gesture.
-\todo{what did this lead to?}
-
-% Investigating Intuitiveness and Effectiveness of Gestures for Free Spatial Interaction with Large Displays
-Hespanhol et al. \cite{Hespanhol:2012} proposes a set of five mid-air gestures to perform selections and rearrange items on a large display using only hands.
-Each of their gestures are described with a scenario in which a given gesture is commonly used e.g. a \emph{push} gesture for pressing a button or a \emph{grab} gesture with the scenario of grabbing a physical object which can then also be moved around.
-Results showed that \emph{dwelling} and \emph{grabbing} were the two fastest gestures for selecting and rearranging respectively and they were also the two gestures with the lowest amount of failures for both tasks.
-
-% Talk about Put-That-There (that old paper from 1984)
-In 1984, Bolt \cite{Bolt:1980} demonstrated a system utilizing voice recognition and gesture input for creating, moving, deleting, and  manipulating objects on a large screen.
-The system combines the two technologies and creates an interface capable of receiving voice commands i.e. \textit{``Create a blue square''}  and coupling it with a pointing gesture and the word \textit{``there''}.
-
+\subsection{Data transfer \& Interaction using handheld devices} \label{sec:targetAcquisition}
+Techniques for interacting with large displays using a handheld devices are numerous and includes smartphones, gyro mice, game controllers (both with and without gyroscopes and accelerometers), and devices fitted with lasers.
 % Myers et al.: Interacting at a Distance: Measuring the Performance of Laser pointers and Other Devices
 Mid-Air pointing in the beginning of the 21st century used laser pointers etc. to interact with and select objects on large displays from a distance. 
 Myers et al. \cite{Myers:2002} experimented with laser pointers and for target acquisition and measured time, accuracy, and how good participants were to dwell on a target using the different lasers.
@@ -86,17 +91,11 @@ They tested four devices (2 laser pointer, 1 Palm PC fitted with a laser, and 1 
 The results showed that holding the Palm PC with one and two hands were the most stable but the Palm PC was also the one users found most cumbersome and heavy. 
 They also did an experiment comparing 4 ways of selecting objects on a large display.
 The technique with the fastest selection time and the lowest error rate was touching directly on the SmartBoard used in the experiment and the laser pointer was slowest and had the second highest error rate.
-Based on the results, a suggestion was made to explore combining laser pointers with other techniques and use the laser to make a coarse grained selection and other techniques as the fine grained selection 
+Based on the results, a suggestion was made to explore combining laser pointers with other techniques and use the laser to make a coarse grained selection and other techniques as the fine grained selection.
 
 % Baudisch et al.: Soap: a Pointing Device that Works in Mid-Air
 
-
-% Ray casting with Mayer et al. Modeling Distant Pointing for Compensating Systematic Displacements
-% and Vogel et al. Distant Freehand Pointing and Clicking on Very Large, High Resolution Displays 
-In the literature, research on different approaches to pointing and controlling e.g virtual pointers on a screen \todo{using these technologies? does what? not sure what this sentence is aimed at.} has been done by Mayer et al. \cite{Mayer:2015} and Vogel et al. \cite{Vogel:2005} among others.
-Mayer et al. presents a study on 3 techniques for absolute distant pointing without visual feedback to see how precise participants were with the three techniques and if the precision could be improved.
-They found that for the most precise technique (\emph{index finger ray casting}) the average error was 61.3 cm before applying a correction model.,
-Using the correction model on the same technique they found that the average error could be reduced by 37.3\% for both sitting and standing at different distances from the display.
-In other words pointing techniques without visual feedback can benefit greatly from correction models.
-Vogel et al. experimented with three pointing techniques to acquire targets on a very large display with high resolution and their findings show that a \emph{RayCasting} technique (extends a ray from the index finger) is significantly faster than \emph{Relative} and \emph{RayToRelative} (combination) techniques.
-In contrast, error rates are far lower for the two relative techniques and the largest difference between \emph{RayCasting} and the relative techniques are for medium to small target sizes indicating that \emph{RayCasting} is less accurate for smaller targets.
+Approaches to transferring data using handheld devices have been documented in the literature and amongst them are throw and tilt gestures using handheld devices for interacting with large displays.
+Dachselt et al. \cite{Dachselt:2008} and Boring et al. \cite{Boring:2009} describe how a tilt technique with a handheld phone can be used to control a pointer on a remote display.
+In addition, Dachselt et al. describe a throwing gesture for transferring data (e.g. from a phone) to and from a large display and the application proposed also uses the concept of transferring an entire user interface between a phone and a display using the throw gesture.
+The idea behind transferring the entire interface is to allow seamless interaction between large display and phone and subsequently improve usability (phone to display) or mobility (display to phone).
