@@ -76,7 +76,7 @@ Since it does not take much movement before the cursor leaves the target area, u
 This is not the case with the larger targets, where the cursor is allowed to deviate more from the center before it actually leaves the shape, and as such not prompting the need to realign the cursor towards the center, since it is still inside the shape. 
 
 \subsection{Summary}
-Initial, we had divided the techniques by assigning them different attributes. 
+Initially, we had divided the techniques by assigning them different attributes. 
 This is because we believed these attributes would heavily effect the results of these techniques compared to each other.
 We gave each technique two attributes, the amount of hands needed to perform the technique, and whether or not the phone was in movement during the activation of the technique.
 \Cref{tab:division} shows the division that we made.
@@ -85,16 +85,12 @@ We gave each technique two attributes, the amount of hands needed to perform the
 	\centering
 	
 	\def\arraystretch{1.9}
-	\begin{tabular}{c c c c c}
-		& & & \multicolumn{2}{c}{\textbf{Movement}} \\
-		\cline{4-5}
-		& & & \textbf{Phone in movement} & \textbf{Phone still} \\ \cline{3-5}
-		\parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c]{90}{\textbf{Number}}}} 
-		\parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c]{90}{\textbf{\ul{of Hands}}}}}
-		& & \textbf{One handed} & Tilt & Swipe \\ \cline{3-5}
-		& & \textbf{Two handed} & Throw & Grab \\ \cline{3-5}
+	\begin{tabular}{c c c}
+		& \textbf{Phone in movement} & \textbf{Phone still} \\ \cline{1-3}
+		\textbf{One handed} & Tilt & Swipe \\ \cline{1-3}
+		\textbf{Two handed} & Throw & Grab \\ \cline{1-3}
 	\end{tabular}
-	\caption{Number of attempts for each technique in each study}
+	\caption{Attribute division for techniques}
 	\label{tab:division}
 \end{table}
 
