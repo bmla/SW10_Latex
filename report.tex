@@ -38,6 +38,8 @@
 \setlength{\footskip}{90pt}
 \renewcommand*\headrulewidth{0pt}}
 
+\input{commands}
+
 \newenvironment{newab}
 		{\small
 			\begin{center}
@@ -146,16 +148,27 @@
 \newpage\null\thispagestyle{empty}\newpage
 \cleardoublepage
 
+% Appendix start
 \pagenumbering{Roman}
 \setcounter{page}{1}
 \pagestyle{appendixplain}
 
+% Appendix TOC
 \addtocontents{toc}{\protect\renewcommand{\protect\cftsecleader}{\hfill}}
 \cftaddtitleline{toc}{section}{Appendices}{}
 \includepdf[pages=-,pagecommand={\thispagestyle{customplain}}]{docs/appendix/appendix.pdf}
 
 \newpage\null\thispagestyle{empty}\newpage
 \cleardoublepage
+
+% Appendix input start
+\input{docs/appendix/docs/pictures}
+\input{docs/appendix/docs/demographics}
+\input{docs/appendix/docs/rawtestlog}
+\input{docs/appendix/docs/rawcommentslog}
+\input{docs/appendix/docs/previouspaper}
+% Appendix input end
+% Appendix end
 
 \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{back.pdf} % The last page
 
