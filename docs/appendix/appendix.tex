@@ -4,10 +4,18 @@
 \usepackage{longtable}
 \usepackage{pdfpages}
 \usepackage{verbatim}
-\usepackage{graphicx}\usepackage{pdflscape}
-\usepackage{tocloft}
+\usepackage{graphicx}
+\usepackage{tocloft}	
+\usepackage{pdflscape}
+\usepackage{afterpage}
 %opening
 
+%Section Titles
+\newcommand{\pictures}{Appendix A: Pictures}
+\newcommand{\demographics}{Appendix B: Demographic Questionnaire}
+\newcommand{\rawtestlog}{Appendix C: Example of raw test log}
+\newcommand{\rawcommentslog}{Appendix D: Example of raw comment log}
+\newcommand{\oldpaper}{Appendix E: Pre-speciale Paper}
 
 \begin{document}
 \title{Appendix}
@@ -46,6 +54,12 @@
 	\vspace*{2\baselineskip}
 		{\scshape 2016} \\
 		{\large AALBORG UNIVERSITY}\par
+		
+\input{docs/pictures}
+\input{docs/demographics}
+\input{docs/rawtestlog}
+\input{docs/rawcommentslog}
+\input{docs/previouspaper}
 
 
 \end{document}
