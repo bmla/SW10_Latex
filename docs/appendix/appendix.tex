@@ -17,6 +17,11 @@
 \newcommand{\rawcommentslog}{Appendix D: Example of raw comment log}
 \newcommand{\oldpaper}{Appendix E: Pre-speciale Paper}
 
+\newcommand{\addbackpage}{
+	\newpage\null\thispagestyle{empty}\newpage
+	\cleardoublepage
+}
+
 \begin{document}
 \title{Appendix}
 
@@ -54,6 +59,9 @@
 	\vspace*{2\baselineskip}
 		{\scshape 2016} \\
 		{\large AALBORG UNIVERSITY}\par
+		
+%\afterpage{\null\newpage}
+\addbackpage
 		
 \input{docs/pictures}
 \input{docs/demographics}
