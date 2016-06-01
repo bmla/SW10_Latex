@@ -68,7 +68,7 @@
 \newlength{\drop}
 \setcounter{page}{1}
 
-%\includepdf[fitpaper,pages=-,pagecommand={\thispagestyle{empty}}]{posterv2.pdf} % The first page
+\includepdf[fitpaper,pages=-,pagecommand={\thispagestyle{empty}}]{front.pdf} % The first page
 \cleardoublepage
 
 \newpage\null\thispagestyle{empty}\newpage
@@ -143,9 +143,6 @@
 \input{docs/conclusion}
 \cleardoublepage
 
-\input{docs/appendix}
-\cleardoublepage
-
 \newpage\null\thispagestyle{empty}\newpage
 \cleardoublepage
 
@@ -160,6 +157,6 @@
 \newpage\null\thispagestyle{empty}\newpage
 \cleardoublepage
 
-%\includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{poster_page_back.pdf} % The last page
+\includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{back.pdf} % The last page
 
 \end{document}
