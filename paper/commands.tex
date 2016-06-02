@@ -41,6 +41,6 @@
  	\pgfmathsetmacro{\xdiffFixed}{ifthenelse(equal(\xdifft,0),1,\xdiff)}%
  	\pgfmathsetmacro{\angle}{ifthenelse(equal(\xdiffFixed,1),90,atan(\ydiff/\xdiffFixed))}%
  	\pgfmathsetlengthmacro{\xydiff}{sqrt(abs(\xdiff^2) + abs(\ydiff^2))}%
- 	\path node[draw,rectangle, rounded corners=4mm, solid, rotate=\angle, minimum width=\xydiff+8ex, minimum height=5ex, fill=gray, opacity=0.3] at ($(start)!.5!(end)$) {};%
+ 	\path node[draw,rectangle, rounded corners=4mm, solid, rotate=\angle, minimum width=\xydiff+8ex, minimum height=5ex, fill=lightgray, opacity=0.3] at ($(start)!.5!(end)$) {};%
  	\end{tikzpicture}%
 }
