@@ -11,14 +11,14 @@ There were several criteria behind the choice of these techniques.
 	\def\arraystretch{1.5}
 	\begin{tabular}{p{0.2\columnwidth} p{0.7\columnwidth}}
 		\hline
-		\textbf{Criteria} & \textbf{Description} \\ \hline
+		\textbf{Attributes} & \textbf{Description} \\ \hline
 		\textit{Number of hands} & There must be both one-handed and two-handed techniques. \\ \hline
 		\textit{Previously used} & To avoid designing and testing a set of novel techniques, we had the criterion that all techniques have been used by others in research studies. \\ \hline
 		\textit{Complexity} & The techniques must differ in their complexity and therefore we included techniques with different amount of steps. \\ \hline
 		\textit{Activation method} & The way each technique is activated must be different from each other. \\ \hline
 		\textit{Natural feel} & There must be a natural and intuitive feel to the techniques in some way. \\ \hline
 	\end{tabular}
-	\caption{Criteria}
+	\caption{Criteria for selection}
 	\label{tab:techniqueCriteria}
 \end{table}
 %Two-handed techniques which are techniques that require both hands.
@@ -30,6 +30,7 @@ We then created a symmetrical version of each technique so they would have both 
 
 Eight techniques were used in the experiment: \alltechniques, each with a \push and \pull variant.
 
+\subsubsection{Grab} \label{sec:grabTechnique}
 The \grab technique is based on a grabbing gesture presented by Hespanhol et al. \cite{Hespanhol:2012} as one of five proposed gestures.
 A related technique is described by Markussen et al. \cite{Markussen:2014}. 
 They present a mid-air word-gesture keyboard named \emph{``Vulture''} that uses a pinch gesture (touching index finger to thumb) to give the user control of the pointer which can then be used to select letters.
@@ -51,6 +52,7 @@ The user then closes his hand over the object (\cref{fig:grabTechniqueB}) and fi
 	\label{fig:grabTechnique}
 \end{figure}
 
+\subsubsection{Swipe} \label{sec:swipeTechnique}
 The \swipe technique (\cref{fig:swipeTechnique}) was utilized by Bragdon et. al in \emph{Code Space} \cite{Bragdon:2011}.
 They developed a system that would support developer meetings with the help of smart phones and the Kinect. 
 Bragdon et al. describe the technique as \emph{``cross-device interaction with touch and air pointing''} and the swiping motion is described as \emph{``flicking up on the touch screen''}.
@@ -70,6 +72,7 @@ If he swipes towards himself, he is pulling information from the screen onto the
 	\label{fig:swipeTechnique}
 \end{figure}
 
+\subsubsection{Throw} \label{sec:throwTechnique}
 The \throw technique (\cref{fig:throwTechnique}) is a combination of two techniques.
 The first is a pointing technique used by Walter et al. in \emph{Cuenesics} \cite{Walter:2014} were the user uses his hands to control a cursor on the screen.
 The second is a technique used by Yatani et al. \cite{Yatani:2005} in \emph{Toss-it} to throw information between handheld devices and by Scheible et al. in \emph{MobiToss} \cite{Scheible:2008} were the system is used to submit information onto a large public display.
@@ -90,6 +93,7 @@ If he is pushing, then he swings towards the screen(\cref{fig:throwTechniqueC}),
 	\label{fig:throwTechnique}
 \end{figure}
 
+\subsubsection{Tilt} \label{sec:tiltTechnique}
 The \tilt technique (\cref{fig:tiltTechnique}) is used by Lucero et al. in \emph{MobiComics} \cite{Lucero:2012}.
 They created a system in which users would transfer objects from a large display onto their mobile devices.
 The \tilt technique was chosen because it is a one handed, low complexity technique with few steps needed to activate it. 
@@ -112,3 +116,10 @@ They differ in the way they are activated as well as the number of hands that ar
 For our two handed techniques, we have \throw and \grab, and for one handed techniques we have \tilt and \swipe. 
 Each technique also has different ways to activate it. 
 The \throw and \tilt techniques require the user to move the phone, whereas the \swipe and \grab techniques require the user to touch and manipulate the screen of the device in order to activate them. 
+
+All the techniques used in this experiment require some combination of mid-air pointing, touch gestures and phone movements to perform. 
+These were all implemented using the Microsoft Kinect V2 as well as the accelerometer and touch sensors on the phone. 
+The Kinect utilizes its depth camera in order to give information about a users location in physical space, allowing us to track the position of the users hands and building the techniques around that. 
+The touch sensor on the phone was used in order to recognize touch and swipe gestures.
+The accelerometer was used to detect significant movement on the phone and use that for the \tilt and \throw techniques. 
+A detailed implementation of the system can be found in \cite{9thSemester:2015}.
