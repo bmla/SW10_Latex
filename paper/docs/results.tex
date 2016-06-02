@@ -2,9 +2,7 @@
 %http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_HypothesisTesting-ANOVA/BS704_HypothesisTesting-Anova_print.html
 \section{Results}\label{sec:results}
 The following section presents the results that were gathered throughout the experiment.
-Here we aim to uncover what variables in our studies were of significance.
-
-Some data points needed to be removed from the experiments, in order to gain a clearer understanding of the experimental outcomes. 
+Here we aim to uncover what variables in our studies were of significance. Some data points needed to be removed from the experiments, in order to gain a clearer understanding of the experimental outcomes. 
 
 For the \target, we started with a total of 7344 attempts.
 176 were removed because of system errors, where the system wrongly activated a technique attempt even though the user did not intend to do so.
@@ -86,7 +84,7 @@ $Direction \times Technique$  ($F_{3,6694.657} = 52.272, p < 0.001$), $Effective
 A post-hoc LSD pairwise comparison on \direction and \technique showed that for each technique the difference in time between \push and \pull were significant.
 We then did a post-hoc LSD pairwise comparison on \effectiveness for each \technique and \direction to see where that significance was and the only significantly different pair was between a successful and unsuccessful attempt of the \grab \pull technique $(p < 0.001)$ meaning that significantly more misses than hits were performed with \grab \pull.
 
-\Cref{fig:efficiencyGraph} shows the mean time taken for each technique and direction.
+\Cref{tab:efficiency} and \cref{fig:efficiencyGraph} shows the mean time taken for each technique and direction.
 
 \begin{table}[H]
 	\centering
@@ -100,8 +98,8 @@ We then did a post-hoc LSD pairwise comparison on \effectiveness for each \techn
 			\textbf{Pull} & 5.74 & 3.67 & 4.12 & 4.55 \T \\ 
 			& (1.57) & (0.86) & (1.01) & (1.61) \B \\ \hline
 		\end{tabular}
-	\caption{Efficiency means in seconds for each technique in \target. SD in parentheses.}
-	\label{tab:successRate}
+	\caption{Efficiency means and (standard deviation) in seconds for each technique in \target.}
+	\label{tab:efficiency}
 \end{table}
 
 \begin{figure}[H]{
@@ -142,11 +140,11 @@ The difference between \pull and \push for all other techniques were significant
 			\textbf{Pull} & 17.65 & 12.4 & 15.07 & 32.71 \T \\
 			& (10.92) & (8.59) & (10.25) & (21.49) \B \\ \hline
 		\end{tabular}
-	\caption{Accuracy means for each technique in \accuracy. SD in parentheses.}
-	\label{tab:successRate}
+	\caption{Accuracy means and (standard deviation) for each technique in \accuracy.}
+	\label{tab:accuracy}
 \end{table}
 
-\Cref{fig:accuracyGraph} shows the mean distance from the center for each technique and direction.
+\Cref{tab:accuracy} and \cref{fig:accuracyGraph} shows the mean distance from the center for each technique and direction.
 \begin{figure}[H]{
 	\centering
 	\textbf{Accuracy}\\[4pt]

@@ -26,3 +26,21 @@
 
 \newcommand\highlight[2][]{\todo[inline, backgroundcolor=yellow, bordercolor=none, caption={2do}, #1]{
 \begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+
+\def\startCirc#1{\tikz[remember picture,overlay]\path node[inner sep=0, anchor=south] (st) {\textbf{#1}} coordinate (start) at (st.center);}%
+\def\endCirc#1{\tikz[remember picture,overlay]\path node[inner sep=0, anchor=south] (en) {\textbf{#1}} coordinate (end) at (en.center);%
+ 	\begin{tikzpicture}[overlay, remember picture]%
+ 	\path (start);%
+ 	\pgfgetlastxy{\startx}{\starty}%
+ 	\path (end);%
+ 	\pgfgetlastxy{\endx}{\endy}%
+ 	\pgfmathsetlengthmacro{\xdiff}{\endx-\startx}%
+ 	\pgfmathsetlengthmacro{\ydiff}{\endy-\starty}%
+ 	\pgfmathtruncatemacro{\xdifft}{\xdiff}%
+ 	\pgfmathsetmacro{\xdiffFixed}{ifthenelse(equal(\xdifft,0),1,\xdiff)}%
+ 	\pgfmathsetmacro{\angle}{ifthenelse(equal(\xdiffFixed,1),90,atan(\ydiff/\xdiffFixed))}%
+ 	\pgfmathsetlengthmacro{\xydiff}{sqrt(abs(\xdiff^2) + abs(\ydiff^2))}%
+ 	\path node[draw,rectangle, rounded corners=4mm, solid, rotate=\angle, minimum width=\xydiff+8ex, minimum height=5ex, fill=gray, opacity=0.3] at ($(start)!.5!(end)$) {};%
+ 	\end{tikzpicture}%
+}

@@ -8,7 +8,7 @@ Our results for effectiveness, or the success rate of each technique, show that 
 Success is a very simple term and as such a great deal of information about the success of a technique is lost when the answer is a simple hit or miss. 
 In order to better understand the association between a technique and a successful attempt, we can use accuracy as a more specific and precise definition of success.
 The closer an attempt is from the center of the target, the more successful it is.
-We will therefore use accuracy as more precise measure of a techniques success.
+We will therefore use accuracy as more precise measure of a techniques success (see \cref{sec:accuracy}).
 
 
 \subsection{Efficiency}
@@ -16,10 +16,10 @@ We will therefore use accuracy as more precise measure of a techniques success.
 Once we start looking at the results regarding the efficiency of each technique, some rather interesting things come to light.
 
 We see that \swipe is the fastest technique by far.
-With an mean time pr. attempt of 3.78 seconds, it outperforms the next fastest technique, \throw, at a mean time of 4.39 seconds per attempt. 
+With an mean time per attempt of 3.78 seconds, it outperforms the next fastest technique, \throw, at a mean time of 4.39 seconds per attempt. 
 One might have expected both one handed techniques to be the fastest, since they have very few steps that must be taken to activate these techniques, but \throw is faster than \tilt. 
 This can be due to a fact that people felt very uncomfortable with the \tilt technique.
-When performing it, users would be very cautious because the pointer tended to move a large distance after each attempt.
+When performing it, users would be very cautious because the cursor tended to move a large distance after each attempt.
 This would lead to people performing a very cautious and slow tilting movement with the phone, and thus not triggering the technique and having to perform it multiple times. 
 Not surprisingly \grab is the slowest technique, since this is by far the most complex technique, with the most number of steps needed in order to perform it.
 
@@ -34,7 +34,6 @@ We also note that the direction of each attempt did not have a significant effec
 This is because not all techniques are effected similarly by the direction. 
 While \swipe, \throw and \tilt all take less time to perform while pulling, \grab has the opposite effect.
 This can be explained once you examine the interaction between direction, technique and success.
-
 Our pairwise comparisons show that the significant interaction between direction, technique and success comes the from difference between the successful and unsuccessful attempts for the \grab \pull technique. 
 Here it shows that an unsuccessful attempt with the \grab \pull is significantly slower than a successful one. 
 This can be explained by the implementation of the technique. 
@@ -44,9 +43,10 @@ This confused our participants.
 Whenever they missed, as they would try to open their hand in order to get another attempt at grabbing the objects, but the system would not allow that.
 As such, the \grab \pull technique did not live up to the metaphor of grabbing and releasing objects in real life.
 This was an intentional design decision though, since none of the other techniques had the opportunity  of retrying the attempt.
-If we had allowed \grab \pull to do so, we would most likely have ended up with a 100\% precise technique. 
+If we had allowed \grab \pull to do so, we would most likely have ended up with a perfect hit rate for that technique. 
 
 \subsection{Accuracy}
+\label{sec:accuracy}
 We see that out of the four techniques, \swipe was the most accurate technique, having a mean of 13.27 pixels from the center of each target. 
 This is closely followed by \throw, with 15.65 pixels, and \grab, with 17.22 pixels.
 The \tilt technique trails far behind, with a mean distance of 30.31 pixels from the center of each target.   
@@ -61,8 +61,10 @@ Even though we asked our participants to be as precise as possible in the \accur
 This is likely related to the idea that the shape itself is still the target. 
 Once the users aim as close as possible to the center of the shape, they prepare themselves to perform the gesture. 
 The cursor also starts to deviate from the center since it is almost impossible to hold it completely still for the duration of the technique.
-Since it does not take much movement before the cursor leaves the target area, users must constantly realign the cursor with the center of the shape before performing the technique.
+Since it does not take much movement before the cursor leaves the target shape area, users must constantly realign the cursor with the center of the shape before performing the technique.
 This is not the case with the larger targets, where the cursor is allowed to deviate more from the center before it actually leaves the shape, and as such not prompting the need to realign the cursor towards the center, since it is still inside the shape. 
+This suggests that users would initially aim towards the center of the cross and be as precise as possible. 
+As they were to perform the gesture, as long as the cursor was still inside the shape, they would go ahead and perform the technique.
 
 \subsection{Summary}
 Initially, we had divided the techniques by assigning them different attributes. 
@@ -73,13 +75,13 @@ We gave each technique two attributes, the amount of hands needed to perform the
 \begin{table}[H]
 	\centering
 	
-	\def\arraystretch{1.5}
+	\def\arraystretch{1.8}
 	\begin{tabular}{c c c}
-		& \textbf{Phone in movement} & \textbf{Phone still} \\ \cline{1-3}
-		\textbf{One handed} & Tilt & Swipe \\ \cline{1-3}
-		\textbf{Two handed} & Throw & Grab \\ \cline{1-3}
+		& \textbf{Touch phone} & \textbf{Move phone} \\ \cline{1-3}
+		\textbf{One handed} & \startCirc{Swipe} & Tilt \\  \cline{1-3}
+		\textbf{Two handed} & Grab & \endCirc{Throw} \\  \cline{1-3}
 	\end{tabular}
-	\caption{Attribute division for techniques}
+	\caption{Attribute division for techniques, with the most efficient and accurate techniques highlighted}
 	\label{tab:division}
 \end{table}
 
@@ -88,16 +90,15 @@ We then see that \throw follows closely behind, in both efficiency and accuracy.
 If we look at efficiency, we see that \tilt takes considerably less time to perform than \grab.
 In regards to accuracy, \grab is the third most accurate technique, with \tilt far behind as the least accurate technique.
 
-While \swipe and \throw do not share any of the attributes we assigned them, they do have one thing in common: the cursor hand is held still through out the activation process.
-The \tilt technique requires the phone hand to be moved in order to activate, and \grab requires the user to open or close his cursor hand, which causes a slight movement of the cursor when doing so.
-This is the single largest contributing factor in whether or not the technique was efficient and accurate.
-The techniques are more accurate because the cursor is held still in the desired location
-They are also more efficient since users feel more comfortable and confident with the techniques that allow for a stable cursor.
+While \swipe and \throw do not share any of the attributes we assigned them, they do have one thing in common: the cursor pointing hand is held still through out the activation process.
+The \tilt technique requires the phone hand, which is also the cursor pointing hand, to be moved in order to activate, and \grab requires the user to open or close his cursor pointing hand, which causes a slight movement of the cursor when doing so.
+This seams to be the single largest contributing factor in whether or not the technique was efficient and accurate.
+Our findings suggest that the most accurate and efficient techniques are the ones were it is possible to hold the cursor still while performing the technique.
 
 We then see that \grab, a two handed technique, is significantly more accurate than \tilt.
-This suggests that if the technique was somehow capable of having a stable cursor while performing it, then two handed technique might be more accurate than one handed.
+This suggests that being capable of operating the mobile device in one hand and aiming with the other contributes to the stability of the cursor, making two hand gestures more accurate than one handed.
 You also see that \tilt is significantly faster than \grab.
-This also suggests that if cursor stability was not a problem, then one handed techniques might be faster to perform than two handed.
-In order to properly determine whether or not the amount of hands used to perform a technique has any effect of efficiency and accuracy, further research must be conducted. 
+This suggests that if cursor stability was not a problem, then one handed techniques might be faster to perform than two handed.
+In order to properly determine whether or not the amount of hands used to perform a technique has any effect on efficiency and accuracy, further research needs to be conducted. 
 
 
