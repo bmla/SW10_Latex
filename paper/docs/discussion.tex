@@ -16,7 +16,7 @@ We will therefore use accuracy as more precise measure of a techniques success (
 Once we start looking at the results regarding the efficiency of each technique, some rather interesting things come to light.
 
 We see that \swipe is the fastest technique by far.
-With an mean time per attempt of 3.78 seconds, it outperforms the next fastest technique, \throw, with a mean time of 4.39 seconds per attempt. 
+With a mean time per attempt of 3.67 seconds and 3.9 seconds for \pull and \push respectively, it outperforms the next fastest technique, \throw, with a mean time of 4.12 seconds and 4.68 seconds per attempt for \pull and \push respectively. 
 One might have expected both one handed techniques to be the fastest, since they have very few steps that must be taken to activate these techniques, but \throw is faster than \tilt. 
 This can be due to a fact that people felt very uncomfortable with the \tilt technique.
 When performing it, users would be very cautious because the cursor tended to move a large distance after each attempt.
@@ -24,16 +24,16 @@ This would lead to people performing a very cautious and slow tilting movement w
 Not surprisingly \grab is the slowest technique, since this is by far the most complex technique, with the most number of steps needed in order to perform it.
 
 Another interesting thing to notice is that a successful attempt did not, in fact, have a significant effect on the time for each attempt.
-This makes sense when you consider it carefully: the aiming part of each technique is shared between all techniques and as such should take the same amount of time.
+This makes sense when considering that the aiming part of each technique is shared between all techniques and as such should take the same amount of time.
 Once the user has acquired the target, he starts performing the technique, and this is where the difference in time comes from.
 
 As such, it is not surprising to see that the target size does have a significant effect on time.
 The aiming process for the smaller targets takes longer, and affects all techniques similarly.
 
-We also note that the direction of each attempt did not have a significant effect on the efficiency of each technique. 
-This is because not all techniques are effected similarly by the direction. 
+We also note that the direction of each attempt did not have a significant effect on the efficiency. 
+This is because not all techniques are affected similarly by the direction. 
 While \swipe, \throw and \tilt all take less time to perform while pulling, \grab has the opposite effect.
-This can be explained once you examine the interaction between direction, technique and success.
+This can be explained once we examine the interaction between direction, technique and success.
 Our pairwise comparisons show that the significant interaction between direction, technique and success comes the from difference between the successful and unsuccessful attempts for the \grab \pull technique. 
 Here it shows that an unsuccessful attempt with the \grab \pull is significantly slower than a successful one. 
 This can be explained by the implementation of the technique. 
@@ -47,9 +47,9 @@ If we had allowed \grab \pull to do so, we would most likely have ended up with 
 
 \subsection{Accuracy}
 \label{sec:accuracy}
-We see that out of the four techniques, \swipe was the most accurate technique, having a mean of 13.27 pixels from the center of each target. 
-This is closely followed by \throw, with 15.65 pixels, and \grab, with 17.22 pixels.
-The \tilt technique trails far behind, with a mean distance of 30.31 pixels from the center of each target.   
+We see that out of the 8 techniques, \swipe was the most accurate technique, having a mean of 12.4 pixels and 14.14 pixels from the center of each target for \pull and \push respectively. 
+This is closely followed by \throw, with 15.07 pixels and 16.24 pixels for \pull and \push respectively, and \grab, with 16.8 pixels and 17.65 pixels for \push and \pull respectively.
+The \tilt technique trails far behind, with a mean distance of 28.03 pixels and 32.71 pixels from the center of each target for \push and \pull respectively.   
 It is no surprise that \tilt is so far behind, since it requires the user to do a very subtle movement with the same hand they are pointing with.
 This usually leads to the cursor being moved away from its original placement since it is very hard to adjust the placement of the hand in such a way as to take into account the required activation movement. 
 Several users attempted to place the cursor slightly below the target to compensate for the movement. 
@@ -96,7 +96,7 @@ Our findings suggest that the most accurate and efficient techniques are the one
 We then see that \grab, a two handed technique, is significantly more accurate than \tilt.
 This suggests that being capable of operating the mobile device in one hand and aiming with the other contributes to the stability of the cursor, making two hand gestures more accurate than one handed.
 This is also suggested by the findings in \cite{Seifert:2013}.
-You also see that \tilt is significantly faster than \grab.
+We also see that \tilt is significantly faster than \grab.
 This suggests that if cursor stability was not a problem, then one handed techniques might be faster to perform than two handed.
 In order to properly determine whether or not the amount of hands used to perform a technique has any effect on efficiency and accuracy, further research needs to be conducted. 
 
